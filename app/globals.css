@@ -3,3 +3,29 @@
 body {
   font-family: var(--font-playfair), serif;
 }
+
+
+.blob {
+  position: relative;
+  border-radius: 50%;
+  filter: blur(180px); 
+  opacity: 1;
+  width: 500px;
+  height: 500px;
+  animation: blob 18s infinite;
+}
+
+@keyframes blob {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(50px, -30px) scale(1.1);
+  }
+  66% {
+    transform: translate(-40px, 40px) scale(0.9);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
