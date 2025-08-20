@@ -8,11 +8,15 @@ body {
 .blob {
   position: relative;
   border-radius: 50%;
-  filter: blur(180px); 
+  filter: blur(80px); 
   opacity: 1;
-  width: 500px;
-  height: 500px;
   animation: blob 18s infinite;
+}
+
+@media (max-width: 768px) {
+  .blob {
+    filter: blur(60px); 
+  }
 }
 
 @keyframes blob {

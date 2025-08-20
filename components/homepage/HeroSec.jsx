@@ -16,10 +16,11 @@ export default function HeroSec() {
             <div className="relative z-10 max-w-[1280px] mx-auto px-6 md:px-12 flex flex-col gap-8">
                 {/* Top  */}
                 <div className="text-left text-white">
-                    <h1 className="flex flex-col text-[52px] md:text-[72px] font-bold leading-tight trht">
+                    <h1 className="flex flex-col text-[52px] md:text-[72px] font-bold leading-tight">
                         Arinome
-                        <span className="text-[52px] md:text-[72px] font-bold leading-tight tra">
+                        <span className="ml-0 md:ml-4 text-[52px] md:text-[72px] font-bold leading-tight">
                             Ventures
+                            <sup className="text-sm md:text-lg align-super ml-1 font-normal">TM</sup>
                         </span>
                     </h1>
                 </div>
@@ -37,8 +38,8 @@ export default function HeroSec() {
 
 
             {/* Bottom Left Blob */}
-            <div className="absolute bottom-[-250px] md:bottom-[-150px] left-[-250px] md:left-[-150px] z-0">
-                <div className="blob bg-[#448AFF]"></div>
+            <div className="absolute bottom-[-150px] left-[-150px] z-0">
+                <div className="blob bg-[#448AFF] w-[300px] h-[300px] md:w-[500px] md:h-[500px]"></div>
             </div>
         </section>
     );
