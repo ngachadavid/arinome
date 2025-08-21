@@ -24,17 +24,20 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className="fixed w-full z-50 bg-transparent backdrop-blur-md text-[#448AFF]">
+            <nav
+                className={`fixed w-full z-50 backdrop-blur-md text-[#448AFF] transition-colors duration-300 ${isScrolled ? 'bg-white text-[#448AFF] shadow-md' : 'bg-transparent text-[#448AFF]'
+                    }`}
+            >
                 <div className="max-w-[1280px] px-4 2xl:px-0 mx-auto flex items-center justify-between transition-all duration-300">
                     {/* Desktop Layout */}
-                    <div className="hidden md:flex items-center space-x-28 py-2">
+                    <div className="hidden md:flex items-center space-x-28 py-4">
                         {/* Logo */}
                         <div className={`font-bold transition-all duration-300 ${isScrolled ? 'text-2xl' : 'text-4xl'}`}>
-                            Arinome 
+                            Arinome
                             <sub className={`text-sm font-normal transition-all duration-300 ${isScrolled ? 'opacity-0 scale-0 ml-0' : 'opacity-100 scale-100'}`}>
                                 ventures
                             </sub>
-                        </div> 
+                        </div>
 
                         {/* Links */}
                         <ul className="flex space-x-8">
@@ -100,8 +103,8 @@ export default function Navbar() {
                     {/* Mobile Menu Links */}
                     <ul className="space-y-0">
                         <li className="border-b border-gray-300">
-                            <a 
-                                href="#about" 
+                            <a
+                                href="#about"
                                 className="block text-2xl font-semibold text-black transition-colors duration-300 py-6"
                                 onClick={toggleMobileMenu}
                             >
@@ -109,8 +112,8 @@ export default function Navbar() {
                             </a>
                         </li>
                         <li className="border-b border-gray-300">
-                            <a 
-                                href="#contact" 
+                            <a
+                                href="#contact"
                                 className="block text-2xl font-semibold text-black transition-colors duration-300 py-6"
                                 onClick={toggleMobileMenu}
                             >
