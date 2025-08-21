@@ -1,3 +1,4 @@
+import Quote from "@/components/global/Quote";
 import About from "@/components/homepage/About";
 import Hero from "@/components/homepage/Hero";
 import HeroSec from "@/components/homepage/HeroSec";
@@ -13,6 +14,7 @@ export default function Home() {
    {/* <Intro /> */}
    <About />
    <Services />
+   <Quote />
    </>
   );
 }
