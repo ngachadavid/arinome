@@ -24,7 +24,7 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className="fixed w-full z-50 bg-transparent backdrop-blur-md text-blue-400">
+            <nav className="fixed w-full z-50 bg-transparent backdrop-blur-md text-[#448AFF]">
                 <div className={`max-w-[1280px] mx-auto px-6 md:px-12 flex items-center justify-between transition-all duration-300 ${isScrolled ? 'py-2' : 'py-4'}`}>
                     {/* Desktop Layout */}
                     <div className="hidden md:flex items-center space-x-28">
@@ -57,7 +57,7 @@ export default function Navbar() {
                     <div className="hidden md:block">
                         <a
                             href="#contact"
-                            className="relative group px-4 py-2 rounded-[20px] bg-blue-400 text-white hover:bg-transparent hover:text-blue-400 transition flex items-center space-x-2 overflow-hidden"
+                            className="relative group px-4 py-2 rounded-[20px] bg-[#448AFF] text-white hover:bg-transparent hover:text-[#448AFF] transition flex items-center space-x-2 overflow-hidden"
                         >
                             {/* Text */}
                             <span className="relative z-10 transition-colors duration-300">
@@ -67,7 +67,7 @@ export default function Navbar() {
                             {/* Arrow */}
                             <div className="relative z-10 w-6 h-6 flex items-center justify-center">
                                 <svg
-                                    className="w-6 h-6 text-white group-hover:text-blue-400 transition-transform duration-300 -rotate-45 group-hover:rotate-0"
+                                    className="w-6 h-6 text-white group-hover:text-[#448AFF] transition-transform duration-300 -rotate-45 group-hover:rotate-0"
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
                                     viewBox="0 0 24 24"
@@ -86,9 +86,9 @@ export default function Navbar() {
                             onClick={toggleMobileMenu}
                             className="flex flex-col justify-center items-center w-8 h-8 space-y-1.5"
                         >
-                            <span className={`block w-6 h-0.5 bg-blue-400 transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-                            <span className={`block w-6 h-0.5 bg-blue-400 transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
-                            <span className={`block w-6 h-0.5 bg-blue-400 transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+                            <span className={`block w-6 h-0.5 bg-[#448AFF] transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+                            <span className={`block w-6 h-0.5 bg-[#448AFF] transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
+                            <span className={`block w-6 h-0.5 bg-[#448AFF] transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
                         </button>
                     </div>
                 </div>
