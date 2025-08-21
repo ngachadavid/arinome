@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Footer() {
     return (
-        <div className="mt-20 w-full bg-[#448AFF] text-white">
+        <div className="w-full bg-[#448AFF] text-white">
             <div className="max-w-[1280px] mx-auto px-4 2xl:px-0 pt-20 pb-10">
                 {/* Upper Section */}
                 <div className="grid md:grid-cols-2 gap-10 border-b border-white/30 pb-8">

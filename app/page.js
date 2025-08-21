@@ -1,3 +1,4 @@
+import CTA from "@/components/global/CTA";
 import Navbar from "@/components/global/Navbar";
 import Quote from "@/components/global/Quote";
 import About from "@/components/homepage/About";
@@ -17,6 +18,7 @@ export default function Home() {
    <About />
    <Services />
    <Quote />
+   <CTA />
    </>
   );
 }
