@@ -16,12 +16,12 @@ export default function Quote() {
 
         {/* Quote Content */}
         <div>
-          <p className="text-2xl text-white w-[70%]">
+          <p className="text-lg md:text-2xl text-white w-full md:w-[70%]">
             “When we started this journey with Arinome Ventures, they quickly understood how we could work together to effectively reduce our establishing and operating costs”
           </p>
           <div className="mt-4">
-            <h4 className="font-extrabold text-lg text-white">Ted Murega</h4>
-            <p className="text-base text-white/60">Operations Manager, Oldonyo Sabuk Primary School</p>
+            <h4 className="font-extrabold text-base md:text-lg text-white">Ted Murega</h4>
+            <p className="text-sm md:text-base text-white/60">Operations Manager, Oldonyo Sabuk Primary School</p>
           </div>
         </div>
       </div>

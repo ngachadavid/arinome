@@ -9,7 +9,7 @@ export default function Footer() {
                 <div className="grid md:grid-cols-2 gap-10 border-b border-white/30 pb-8">
                     {/* Left Side */}
                     <div>
-                        <p className="text-base leading-relaxed w-[60%]">
+                        <p className="text-base md:text-lg leading-relaxed w-[80%] md:w-[60%]">
                             We are committed to delivering innovative solutions
                             and exceptional results for all our clients.
                         </p>
@@ -19,8 +19,8 @@ export default function Footer() {
                     <div className="grid grid-cols-2 gap-8">
                         {/* Menu */}
                         <div>
-                            <h3 className="text-white/60 text-xl mb-4">Menu</h3>
-                            <ul className="space-y-4">
+                            <h3 className="text-white/60 text-lg md:text-xl mb-4">Menu</h3>
+                            <ul className="space-y-2 md:space-y-4">
                                 <li><a href="#about" className="">About</a></li>
                                 <li><a href="#contact" className="">Contact</a></li>
                             </ul>
@@ -28,8 +28,8 @@ export default function Footer() {
 
                         {/* Contact */}
                         <div>
-                            <h3 className="text-white/60 text-xl mb-4">Contact</h3>
-                            <ul className="space-y-4">
+                            <h3 className="text-white/60 text-lg md:text-xl mb-4">Contact</h3>
+                            <ul className="space-y-2 md:space-y-4">
                                 <li>Panesar Centre
                                     Imara Daima, <br/>Mombasa Road, Nairobi
                                 </li>
@@ -43,7 +43,7 @@ export default function Footer() {
 
                 {/* Lower Section */}
                 <div className="flex text-start py-4 border-b border-white/30 pb-8">
-                    <p className="text-sm">&copy; {new Date().getFullYear()} Arinome Ventures. All rights reserved.</p>
+                    <p className="text-xs md:text-sm">&copy; {new Date().getFullYear()} Arinome Ventures. All rights reserved.</p>
                 </div>
             </div>
         </div>
