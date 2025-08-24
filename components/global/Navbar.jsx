@@ -1,5 +1,6 @@
 'use client'
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -30,22 +31,36 @@ export default function Navbar() {
             >
                 <div className="max-w-[1280px] px-4 2xl:px-0 mx-auto flex items-center justify-between transition-all duration-300 py-4">
                     {/* Logo */}
-                    <div className={`font-bold transition-all duration-300 ${isScrolled ? 'text-2xl md:text-2xl' : 'text-2xl md:text-4xl'}`}>
-                        Arinome
-                        <sub className={`font-normal transition-all duration-300 ${isScrolled ? 'opacity-0 scale-0 ml-0 text-xs md:text-sm' : 'opacity-100 scale-100 text-xs md:text-sm'}`}>
-                            ventures
-                        </sub>
+
+                    <div>
+                        <Link href="/" className="flex items-center">
+                            <div
+                                className={`font-bold transition-all duration-300 ${isScrolled ? "text-2xl md:text-2xl" : "text-2xl md:text-4xl"
+                                    }`}
+                            >
+                                Arinome
+                                <sub
+                                    className={`font-normal transition-all duration-300 ${isScrolled
+                                            ? "opacity-0 scale-0 ml-0 text-xs md:text-sm"
+                                            : "opacity-100 scale-100 text-xs md:text-sm"
+                                        }`}
+                                >
+                                    ventures
+                                </sub>
+                            </div>
+                        </Link>
                     </div>
+
 
                     {/* Desktop Right Section */}
                     <div className="hidden md:flex items-center space-x-8">
                         {/* About Link */}
-                        <a href="/about" className="hover:text-blue-500 transition-colors duration-300">
+                        <Link href="/about" className="hover:text-blue-500 transition-colors duration-300">
                             About
-                        </a>
+                        </Link>
 
                         {/* Get in Touch Button */}
-                        <a
+                        <Link
                             href="/contact"
                             className="relative group px-4 py-2 rounded-[20px] bg-[#448AFF] text-white hover:bg-transparent hover:text-[#448AFF] transition flex items-center space-x-2 overflow-hidden"
                         >
@@ -67,7 +82,7 @@ export default function Navbar() {
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M19 12H5m14 0-4 4m4-4-4-4" />
                                 </svg>
                             </div>
-                        </a>
+                        </Link>
                     </div>
 
                     {/* Mobile Hamburger Menu */}
@@ -90,25 +105,25 @@ export default function Navbar() {
                     {/* Mobile Menu Links */}
                     <ul className="space-y-0">
                         <li className="border-b border-gray-300">
-                            <a
-                                href="#about"
+                            <Link
+                                href="/about"
                                 className="block text-2xl font-semibold text-black transition-colors duration-300 py-6"
                                 onClick={toggleMobileMenu}
                             >
                                 About
-                            </a>
+                            </Link>
                         </li>
                     </ul>
 
                     {/* Mobile Get in Touch Button */}
                     <div className="mt-12">
-                        <a
-                            href="#contact"
+                        <Link
+                            href="/contact"
                             className="inline-block px-8 py-4 rounded-[25px] bg-[#448AFF] text-white font-bold text-lg transition-colors duration-300"
                             onClick={toggleMobileMenu}
                         >
                             Get in Touch
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
