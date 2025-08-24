@@ -40,13 +40,13 @@ export default function Navbar() {
                     {/* Desktop Right Section */}
                     <div className="hidden md:flex items-center space-x-8">
                         {/* About Link */}
-                        <a href="#about" className="hover:text-blue-500 transition-colors duration-300">
+                        <a href="/about" className="hover:text-blue-500 transition-colors duration-300">
                             About
                         </a>
 
                         {/* Get in Touch Button */}
                         <a
-                            href="#contact"
+                            href="/contact"
                             className="relative group px-4 py-2 rounded-[20px] bg-[#448AFF] text-white hover:bg-transparent hover:text-[#448AFF] transition flex items-center space-x-2 overflow-hidden"
                         >
                             {/* Text */}
