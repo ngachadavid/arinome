@@ -1,5 +1,6 @@
 import Intro from '@/components/about/Intro'
 import Results from '@/components/about/Results'
+import Values from '@/components/about/Values'
 import Navigation from '@/components/global/Navigation'
 import PageHero from '@/components/global/PageHero'
 import React from 'react'
@@ -11,6 +12,7 @@ export default function page() {
     <PageHero />
     <Intro />
     <Results />
+    <Values />
     </>
   )
 }
