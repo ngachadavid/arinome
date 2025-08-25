@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function AboutHero() {
+export default function ContactHero() {
   return (
     <section className="relative">
       {/* Hero Background */}
@@ -9,12 +9,12 @@ export default function AboutHero() {
           
           {/* Heading */}
           <h1 className="mt-20 md:mt-32 2xl:mt-40 text-3xl md:text-6xl font-bold text-start md:text-left">
-            About
+            Contact Us
           </h1>
 
           {/* Paragraph */}
           <p className="mt-6 md:mt-32 2xl:mt-40 w-full md:w-[60%] 2xl:w-[30%] text-lg md:text-2xl leading-relaxed font-semibold text-start md:text-left">
-            Learn about the company's mission, guiding principles, and leadership spearheaded by a team of experts.
+           We are here to help you. Contact us using the form below, and we will get back to you as soon as possible.
           </p>
 
         </div>
