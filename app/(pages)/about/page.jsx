@@ -5,14 +5,14 @@ import Results from '@/components/about/Results'
 import Values from '@/components/about/Values'
 import CTA from '@/components/global/CTA'
 import Navigation from '@/components/global/Navigation'
-import PageHero from '@/components/global/PageHero'
+import AboutHero from '@/components/about/AboutHero'
 import React from 'react'
 
 export default function page() {
   return (
     <>
     <Navigation />
-    <PageHero />
+    <AboutHero />
     <Intro />
     <Results />
     <Values />

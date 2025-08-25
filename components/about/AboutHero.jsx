@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function PageHero() {
+export default function AboutHero() {
   return (
     <section className="relative">
       {/* Hero Background */}
