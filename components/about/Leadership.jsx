@@ -48,19 +48,19 @@ export default function Leadership() {
               className="flex flex-col md:flex-row md:gap-6"
             >
               {/* Left Side*/}
-              <div className="md:w-[50%] flex flex-col md:flex-row md:items-start gap-6">
+              <div className="md:w-[50%] flex md:items-start gap-6">
                 {/* Image */}
                 <div className="flex-shrink-0">
                   <img
                     src={leader.image}
                     alt={leader.name}
-                    className="w-60 h-60 rounded-2xl object-cover shadow-lg"
+                    className="w-40 md:w-60 h-40 md:h-60 rounded-2xl object-cover shadow-lg"
                   />
                 </div>
                 {/* Name + Title */}
                 <div className=''>
-                  <h3 className="text-2xl font-bold text-black">{leader.name}</h3>
-                  <p className="text-black/60 font-medium mt-2">{leader.title}</p>
+                  <h3 className="text-xl md:text-2xl font-bold text-black">{leader.name}</h3>
+                  <p className="text-base md:text-xl text-black/80 font-medium mt-2">{leader.title}</p>
                 </div>
               </div>
 
@@ -75,8 +75,8 @@ export default function Leadership() {
 
                 {/* Core Competencies */}
                 <div className="mt-4">
-                  <h4 className="font-bold text-black mb-2">Core Competencies</h4>
-                  <ul className="list-disc list-inside space-y-1 text-black text-sm">
+                  <h4 className="font-bold text-black mb-2 text-sm md:text-base">Core Competencies</h4>
+                  <ul className="list-disc list-inside space-y-1 text-black/80 text-sm md:text-base">
                     {leader.competencies.map((comp, i) => (
                       <li key={i}>{comp}</li>
                     ))}
