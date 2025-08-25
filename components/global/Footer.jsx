@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 
 export default function Footer() {
     return (
@@ -21,8 +22,16 @@ export default function Footer() {
                         <div>
                             <h3 className="text-white/60 text-lg md:text-xl mb-4">Menu</h3>
                             <ul className="space-y-2 md:space-y-4">
-                                <li><a href="#about" className="">About</a></li>
-                                <li><a href="#contact" className="">Contact</a></li>
+                                <li>
+                                    <Link href="/about" className="">
+                                        About
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href="/contact" className="">
+                                        Contact
+                                    </Link>
+                                </li>
                             </ul>
                         </div>
 
@@ -30,14 +39,29 @@ export default function Footer() {
                         <div>
                             <h3 className="text-white/60 text-lg md:text-xl mb-4">Contact</h3>
                             <ul className="space-y-2 md:space-y-4">
-                                <li>Panesar Centre
-                                    Imara Daima, <br/>Mombasa Road, Nairobi
+                                <li>
+                                    Panesar Centre
+                                    Imara Daima, <br />Mombasa Road, Nairobi
                                 </li>
-                                <li>info@arinome.com</li>
-                                <li>+254 715 259 657
-</li>
+                                <li>
+                                    <a
+                                        href="mailto:info@arinome.com"
+                                        className=""
+                                    >
+                                        info@arinome.com
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="tel:+254715259657"
+                                        className=""
+                                    >
+                                        +254 715 259 657
+                                    </a>
+                                </li>
                             </ul>
                         </div>
+
                     </div>
                 </div>
 
