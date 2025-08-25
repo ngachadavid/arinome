@@ -3,7 +3,7 @@ import React from 'react'
 export default function Intro() {
   return (
     <section className='bg-white'>
-        <div className='mt-80 mb-40 max-w-[1280px] px-4 2xl:px-4 mx-auto'>
+        <div className='mt-70 md:mt-80 mb-20 md:mb-40 max-w-[1280px] px-4 2xl:px-4 mx-auto'>
             <h2 className='text-black text-2xl md:text-4xl font-bold'>
                 Who we are?
             </h2>
