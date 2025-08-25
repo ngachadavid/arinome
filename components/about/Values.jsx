@@ -35,7 +35,7 @@ export default function Values() {
   ]
 
   return (
-    <section className='bg-white py-20'>
+    <section className='bg-white pt-20'>
         <div className='max-w-[1280px] mx-auto px-4 2xl:px-0'>
                 <h1 className='text-black text-2xl md:text-4xl font-bold'>Our Values</h1>
                 <div className="mt-6 w-full h-[1px] bg-gray-300 rounded"></div>

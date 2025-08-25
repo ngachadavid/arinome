@@ -1,4 +1,5 @@
 import Intro from '@/components/about/Intro'
+import Leadership from '@/components/about/Leadership'
 import Results from '@/components/about/Results'
 import Values from '@/components/about/Values'
 import Navigation from '@/components/global/Navigation'
@@ -13,6 +14,7 @@ export default function page() {
     <Intro />
     <Results />
     <Values />
+    <Leadership />
     </>
   )
 }
