@@ -58,7 +58,7 @@ export default function Form() {
     }, [success]);
 
     return (
-        <form onSubmit={handleSubmit} className="md:w-[60%] space-y-6">
+        <form onSubmit={handleSubmit} className="md:w-[60%] space-y-6 p-6 md:p-12">
             {success && (
                 <p className="text-green-500 text-sm transition-opacity duration-500">
                     Form submitted successfully!

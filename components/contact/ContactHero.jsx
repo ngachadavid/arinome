@@ -22,7 +22,7 @@ export default function ContactHero() {
                 </div>
             </div>
 
-            <div className="absolute bottom-[-200px] md:bottom-[-250px] left-1/2 -translate-x-1/2 w-[90%] md:w-[80%] z-10 bg-white rounded-2xl shadow-lg p-6 md:p-12 flex flex-col md:flex-row gap-6">
+            <div className="absolute bottom-[-620px] md:bottom-[-250px] left-1/2 -translate-x-1/2 w-[90%] md:w-[80%] z-10 bg-white rounded-2xl shadow-lg flex flex-col md:flex-row gap-6">
                 <Map />
                 <Form />
             </div>
