@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-export default function Quote() {
+export default function AboutQuote() {
   return (
     <div className="w-full bg-[#448AFF] py-6 rounded-t-4xl">
       <div className="flex items-start space-x-6 p-20 max-w-[1280px] px-4 2xl:px-0 mx-auto">
@@ -17,11 +17,11 @@ export default function Quote() {
         {/* Quote Content */}
         <div>
           <p className="text-lg md:text-2xl text-white w-full md:w-[70%]">
-            “Working with Arinome has transformed how we manage our school operations. From our office essentials to specialized supplies, their efficiency and professionalism have helped our school run smoothly. I can always count on them to provide quality solutions on time.”
+            “Arinome delivered exceptional solutions by enhancing our online store system and providing high-quality printed materials. We continue to work with them, as they remain a reliable partner.”
           </p>
           <div className="mt-4">
-            <h4 className="font-extrabold text-base md:text-lg text-white">Ted Murega</h4>
-            <p className="text-sm md:text-base text-white/60">Operations Manager, Oldonyo Sabuk Primary School</p>
+            <h4 className="font-extrabold text-base md:text-lg text-white">Isaac Okoth</h4>
+            <p className="text-sm md:text-base text-white/60">Founder, Creative Agency Inc.</p>
           </div>
         </div>
       </div>
