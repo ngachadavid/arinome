@@ -1,6 +1,37 @@
-import React from 'react';
+'use client'
+import React, { useState, useEffect, useRef } from 'react';
+
+// Custom hook for intersection observer
+const useInView = (options = {}) => {
+  const [isInView, setIsInView] = useState(false)
+  const ref = useRef()
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true)
+          observer.disconnect()
+        }
+      },
+      {
+        threshold: 0.2, 
+        ...options
+      }
+    )
+
+    if (ref.current) {
+      observer.observe(ref.current)
+    }
+
+    return () => observer.disconnect()
+  }, [])
+
+  return [ref, isInView]
+}
 
 export default function Leadership() {
+  const [ref, isInView] = useInView()
   const leaders = [
     {
       image: "/homepage/hero.webp",
@@ -35,37 +66,54 @@ export default function Leadership() {
   ];
 
   return (
-    <section className="bg-white py-20">
+    <section className="bg-white py-20" ref={ref}>
       <div className="max-w-[1280px] px-4 2xl:px-4 mx-auto">
-        <h2 className="text-black text-2xl md:text-4xl font-bold">
-          Our Leadership Team
-        </h2>
-        <div className="mt-6 w-full h-[1px] bg-gray-300 rounded"></div>
+        {/* Animated header */}
+        <div className={`transition-all duration-700 ease-out ${
+          isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+        }`}
+        style={{ transitionDelay: '0.1s' }}>
+          <h2 className="text-black text-2xl md:text-4xl font-bold">
+            Our Leadership Team
+          </h2>
+          <div className="mt-6 w-full h-[1px] bg-gray-300 rounded"></div>
+        </div>
+
         <div className="mt-20 space-y-20">
           {leaders.map((leader, index) => (
             <div
               key={index}
               className="flex flex-col md:flex-row md:gap-6"
             >
-              {/* Left Side*/}
+              {/* Left Side - Image and Name/Title */}
               <div className="md:w-[50%] flex md:items-start gap-6">
                 {/* Image */}
-                <div className="flex-shrink-0">
+                <div className={`flex-shrink-0 transition-all duration-700 ease-out ${
+                  isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+                }`}
+                style={{ transitionDelay: `${0.3 + (index * 0.4)}s` }}>
                   <img
                     src={leader.image}
                     alt={leader.name}
                     className="w-40 md:w-60 h-40 md:h-60 rounded-2xl object-cover shadow-lg"
                   />
                 </div>
+                
                 {/* Name + Title */}
-                <div className=''>
+                <div className={`transition-all duration-700 ease-out ${
+                  isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+                }`}
+                style={{ transitionDelay: `${0.3 + (index * 0.4)}s` }}>
                   <h3 className="text-xl md:text-2xl font-bold text-black">{leader.name}</h3>
                   <p className="text-base md:text-xl text-black/80 font-medium mt-2">{leader.title}</p>
                 </div>
               </div>
 
-              {/* Right Side */}
-              <div className="md:w-[50%] mt-6 md:mt-0 space-y-4">
+              {/* Right Side - Bio and Competencies */}
+              <div className={`md:w-[50%] mt-6 md:mt-0 space-y-4 transition-all duration-700 ease-out ${
+                isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+              }`}
+              style={{ transitionDelay: `${0.7 + (index * 0.4)}s` }}>
                 {/* Bio */}
                 {leader.bio.map((para, i) => (
                   <p key={i} className="text-black text-sm md:text-base">
@@ -82,13 +130,10 @@ export default function Leadership() {
                     ))}
                   </ul>
                 </div>
-
               </div>
-
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

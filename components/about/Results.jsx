@@ -89,10 +89,13 @@ export default function Results() {
 
   return (
     <section className="bg-[#448AFF] text-white py-20">
-      <div className="max-w-[1280px] px-4 2xl:px-0 mx-auto flex flex-col md:flex-row gap-8">
+      <div className="max-w-[1280px] px-4 2xl:px-0 mx-auto flex flex-col md:flex-row gap-8" ref={ref}>
 
         {/* Left Side */}
-        <div className="w-full md:w-1/3">
+        <div className={`w-full md:w-1/3 transition-all duration-800 ease-out ${
+          isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+        }`}
+        style={{ transitionDelay: '0.1s' }}>
           <h2 className="text-white text-2xl md:text-4xl font-bold">Our Results</h2>
         </div>
 
@@ -100,19 +103,31 @@ export default function Results() {
         <div className="w-full md:w-2/3 space-y-6">
           {/* Statements */}
           <div className="space-y-1">
-            <p className="text-white/60 text-lg md:text-3xl font-semibold leading-relaxed">
+            <p className={`text-white/60 text-lg md:text-3xl font-semibold leading-relaxed transition-all duration-800 ease-out ${
+              isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}
+            style={{ transitionDelay: '0.3s' }}>
               We turn ideas into impactful solutions.
             </p>
-            <p className="text-white/60 text-lg md:text-3xl font-semibold leading-relaxed">
+            <p className={`text-white/60 text-lg md:text-3xl font-semibold leading-relaxed transition-all duration-800 ease-out ${
+              isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}
+            style={{ transitionDelay: '0.5s' }}>
               We drive sustainable growth through innovation.
             </p>
-            <p className="text-white text-lg md:text-3xl font-semibold leading-relaxed">
+            <p className={`text-white text-lg md:text-3xl font-semibold leading-relaxed transition-all duration-800 ease-out ${
+              isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}
+            style={{ transitionDelay: '0.7s' }}>
               We deliver measurable results that last.
             </p>
           </div>
 
           {/* Stats */}
-          <div ref={ref} className="grid grid-cols-2 gap-6 mt-20">
+          <div className={`grid grid-cols-2 gap-6 mt-20 transition-all duration-800 ease-out ${
+            isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          }`}
+          style={{ transitionDelay: '0.9s' }}>
             <AnimatedStat
               title="Number of Clients Served"
               value="30+"

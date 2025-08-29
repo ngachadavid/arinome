@@ -4,19 +4,19 @@
 // export default function AboutQuote() {
 //   return (
 //     <div className="w-full bg-[#448AFF] py-6 rounded-t-4xl">
-//       <div className="flex items-start space-x-6 p-20 max-w-[1280px] px-4 2xl:px-0 mx-auto">
+//       <div className="flex flex-col md:flex-row items-start space-x-6 p-10 md:p-20 max-w-[1280px] px-4 2xl:px-0 mx-auto">
 //         {/* Left Image */}
 //         <div className="flex-shrink-0">
 //           <img
 //             src="/homepage/hero.webp"
 //             alt="Person"
-//             className="w-20 h-20 rounded-full object-cover"
+//             className="w-24 md:w-20 h-24 md:h-20 rounded-full object-cover"
 //           />
 //         </div>
 
 //         {/* Quote Content */}
 //         <div>
-//           <p className="text-lg md:text-2xl text-white w-full md:w-[70%]">
+//           <p className="mt-6 md:mt-0 text-lg md:text-2xl text-white w-full md:w-[70%]">
 //             “Arinome delivered exceptional solutions by enhancing our online store system and providing high-quality printed materials. We continue to work with them, as they remain a reliable partner.”
 //           </p>
 //           <div className="mt-4">
@@ -30,14 +30,43 @@
 // }
 
 "use client";
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 
 export default function AboutQuote() {
+  const ref = useRef(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="w-full bg-[#448AFF] py-6 rounded-t-4xl">
-      <div className="flex flex-col md:flex-row items-start space-x-6 p-10 md:p-20 max-w-[1280px] px-4 2xl:px-0 mx-auto">
+      <div
+        ref={ref}
+        className="flex flex-col md:flex-row items-start space-x-6 p-10 md:p-20 max-w-[1280px] px-4 2xl:px-0 mx-auto"
+      >
         {/* Left Image */}
-        <div className="flex-shrink-0">
+        <div
+          className={`flex-shrink-0 transition-all duration-700 ease-out ${
+            inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          }`}
+          style={{ transitionDelay: "0.1s" }}
+        >
           <img
             src="/homepage/hero.webp"
             alt="Person"
@@ -47,12 +76,26 @@ export default function AboutQuote() {
 
         {/* Quote Content */}
         <div>
-          <p className="mt-6 md:mt-0 text-lg md:text-2xl text-white w-full md:w-[70%]">
-            “Arinome delivered exceptional solutions by enhancing our online store system and providing high-quality printed materials. We continue to work with them, as they remain a reliable partner.”
+          <p
+            className={`mt-6 md:mt-0 text-lg md:text-2xl text-white w-full md:w-[70%] transition-all duration-700 ease-out ${
+              inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+            }`}
+            style={{ transitionDelay: "0.3s" }}
+          >
+            “Working with Arinome has transformed how we manage our school operations. From our office essentials to
+            specialized supplies, their efficiency and professionalism have helped our school run smoothly. I can always
+            count on them to provide quality solutions on time.”
           </p>
-          <div className="mt-4">
-            <h4 className="font-extrabold text-base md:text-lg text-white">Isaac Okoth</h4>
-            <p className="text-sm md:text-base text-white/60">Founder, Creative Agency Inc.</p>
+          <div
+            className={`mt-4 transition-all duration-700 ease-out ${
+              inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+            }`}
+            style={{ transitionDelay: "0.5s" }}
+          >
+            <h4 className="font-extrabold text-base md:text-lg text-white">Ted Murega</h4>
+            <p className="text-sm md:text-base text-white/60">
+              Operations Manager, Oldonyo Sabuk Primary School
+            </p>
           </div>
         </div>
       </div>
