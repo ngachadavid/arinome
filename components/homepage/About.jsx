@@ -1,39 +1,62 @@
 'use client'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Target, HandHeart, Lightbulb, Heart, CheckCircle } from "lucide-react";
 
 export default function About() {
     const [currentIndex, setCurrentIndex] = useState(0)
     const [slidesPerView, setSlidesPerView] = useState(3.5)
+    const [isVisible, setIsVisible] = useState(false)
+    const sectionRef = useRef(null)
 
     const features = [
-    {
-        title: "Trusted Expertise",
-        description: "A proven track record in handling diverse projects with precision and professionalism, giving clients the confidence that every task is in safe hands.",
-        icon: Target
-    },
-    {
-        title: "Dedicated Support",
-        description: "Our team is always ready to assist, providing personalized guidance and quick responses to ensure your projects run smoothly and stress-free.",
-        icon: HandHeart
-    },
-    {
-        title: "Tailored Solutions",
-        description: "Every client is unique. We adapt to specific requirements with flexible, innovative approaches that deliver practical and effective outcomes.",
-        icon: Lightbulb
-    },
-    {
-        title: "Client-First Commitment",
-        description: "Your priorities guide our process. We align with your objectives to ensure that every engagement adds value and exceeds expectations.",
-        icon: Heart
-    },
-    {
-        title: "Dependable Delivery",
-        description: "Timely, consistent, and reliable results are at the core of our operations — because in business, trust is built on keeping promises.",
-        icon: CheckCircle
-    }
-];
+        {
+            title: "Trusted Expertise",
+            description: "A proven track record in handling diverse projects with precision and professionalism, giving clients the confidence that every task is in safe hands.",
+            icon: Target
+        },
+        {
+            title: "Dedicated Support",
+            description: "Our team is always ready to assist, providing personalized guidance and quick responses to ensure your projects run smoothly and stress-free.",
+            icon: HandHeart
+        },
+        {
+            title: "Tailored Solutions",
+            description: "Every client is unique. We adapt to specific requirements with flexible, innovative approaches that deliver practical and effective outcomes.",
+            icon: Lightbulb
+        },
+        {
+            title: "Client-First Commitment",
+            description: "Your priorities guide our process. We align with your objectives to ensure that every engagement adds value and exceeds expectations.",
+            icon: Heart
+        },
+        {
+            title: "Dependable Delivery",
+            description: "Timely, consistent, and reliable results are at the core of our operations — because in business, trust is built on keeping promises.",
+            icon: CheckCircle
+        }
+    ];
 
+    // Intersection Observer for viewport detection
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true)
+                }
+            },
+            { threshold: 0.8 }
+        )
+
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current)
+        }
+
+        return () => {
+            if (sectionRef.current) {
+                observer.unobserve(sectionRef.current)
+            }
+        }
+    }, [])
 
     // Update slidesPerView based on window size
     useEffect(() => {
@@ -65,7 +88,7 @@ export default function About() {
     }
 
     return (
-        <section className="py-20">
+        <section className="py-20" ref={sectionRef}>
             <div className='max-w-[1280px] mx-auto px-4 2xl:px-0'>
                 <h1 className='text-black text-2xl md:text-4xl font-bold'>Why Arinome Ventures?</h1>
                 <div className="mt-6 w-full h-[1px] bg-gray-300 rounded"></div>
@@ -123,12 +146,12 @@ export default function About() {
 
                     <div className="w-[95%] md:w-2/3 lg:w-1/2">
                         <p className="text-black text-base md:text-xl leading-relaxed">
-                            You want seamless operations and dependable results; we’re the partner that makes it happen. Our forward-thinking approach ensures every project runs smoothly and adds real value to your business.
+                            You want seamless operations and dependable results; we're the partner that makes it happen. Our forward-thinking approach ensures every project runs smoothly and adds real value to your business.
                         </p>
                     </div>
                 </div>
 
-                {/* Single Swiper */}
+                {/* Single Swiper with animated cards */}
                 <div className="mt-16 overflow-hidden">
                     <div
                         className="flex transition-transform duration-300 ease-in-out"
@@ -141,10 +164,17 @@ export default function About() {
                             return (
                                 <div
                                     key={index}
-                                    className="flex-shrink-0 px-1 md:px-2"
-                                    style={{ width: `calc(100% / ${slidesPerView})` }}
+                                    className={`flex-shrink-0 px-1 md:px-2 transition-all duration-700 ease-out ${
+                                        isVisible 
+                                            ? 'opacity-100 translate-y-0' 
+                                            : 'opacity-0 translate-y-4'
+                                    }`}
+                                    style={{ 
+                                        width: `calc(100% / ${slidesPerView})`,
+                                        transitionDelay: `${index * 0.10}s`
+                                    }}
                                 >
-                                    <div className="bg-white rounded-xl shadow-lg p-4 md:p-6 h-full border border-gray-300 hover:shadow-xl transion-shadow text-start">
+                                    <div className="bg-white rounded-xl shadow-lg p-4 md:p-6 h-full border border-gray-300 hover:shadow-xl transition-shadow text-start">
                                         <div className="text-4xl mb-12 md:mb-20">
                                             <IconComponent className="w-12 h-12 text-[#448AFF]" />
                                         </div>

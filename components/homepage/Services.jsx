@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 const services = [
   {
@@ -56,19 +56,88 @@ const services = [
 
 
 export default function Services() {
+    const [headerVisible, setHeaderVisible] = useState(false)
+    const [serviceVisibility, setServiceVisibility] = useState({})
+    const headerRef = useRef(null)
+    const serviceRefs = useRef([])
+
+    // Header intersection observer
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setHeaderVisible(true)
+                }
+            },
+            { threshold: 0.3 }
+        )
+
+        if (headerRef.current) {
+            observer.observe(headerRef.current)
+        }
+
+        return () => {
+            if (headerRef.current) {
+                observer.unobserve(headerRef.current)
+            }
+        }
+    }, [])
+
+    // Services intersection observer
+    useEffect(() => {
+        const observers = []
+        
+        serviceRefs.current.forEach((ref, index) => {
+            if (ref) {
+                const observer = new IntersectionObserver(
+                    ([entry]) => {
+                        if (entry.isIntersecting) {
+                            setServiceVisibility(prev => ({
+                                ...prev,
+                                [index]: true
+                            }))
+                        }
+                    },
+                    { threshold: 0.2 }
+                )
+                
+                observer.observe(ref)
+                observers.push(observer)
+            }
+        })
+
+        return () => {
+            observers.forEach(observer => observer.disconnect())
+        }
+    }, [])
+
     return (
         <section className="py-20">
             <div className="max-w-[1280px] mx-auto px-4 2xl:px-0 space-y-16">
-                <h1 className='text-black text-2xl md:text-4xl font-bold w-[50%]'>Browse our services below to see how we can assist your business.</h1>
-                <div className="mt-6 w-full h-[1px] bg-gray-300 rounded"></div>
+                    <h1 className='text-black text-2xl md:text-4xl font-bold w-[50%]'>
+                        Browse our services below to see how we can assist your business.
+                    </h1>
+                    <div className="mt-6 w-full h-[1px] bg-gray-300 rounded"></div>
+                
+
+                {/* Animated services */}
                 {services.map((service, index) => (
                     <div
                         key={index}
-                        className={`flex flex-col md:flex-row items-center gap-8 ${index % 2 === 1 ? "md:flex-row-reverse" : ""
-                            }`}
+                        ref={el => serviceRefs.current[index] = el}
+                        className={`flex flex-col md:flex-row items-center gap-8 ${
+                            index % 2 === 1 ? "md:flex-row-reverse" : ""
+                        }`}
                     >
-                        {/* Content */}
-                        <div className="md:w-1/2">
+                        {/* Content - fade up animation */}
+                        <div 
+                            className={`md:w-1/2 transition-all duration-700 ease-out ${
+                                serviceVisibility[index] 
+                                    ? 'opacity-100 translate-y-0' 
+                                    : 'opacity-0 translate-y-10'
+                            }`}
+                            style={{ transitionDelay: '0.2s' }}
+                        >
                             <h3 className="text-3xl font-bold mb-4">{service.title}</h3>
                             <p className="text-black text-lg mb-4 w-[90%]">{service.description}</p>
                             <ul className="px-2 list-disc list-inside text-black/90 space-y-1">
@@ -77,8 +146,16 @@ export default function Services() {
                                 ))}
                             </ul>
                         </div>
-                        {/* Image */}
-                        <div className="md:w-1/2">
+
+                        {/* Image - more pronounced fade up animation */}
+                        <div 
+                            className={`md:w-1/2 transition-all duration-800 ease-out ${
+                                serviceVisibility[index] 
+                                    ? 'opacity-100 translate-y-0' 
+                                    : 'opacity-0 translate-y-6'
+                            }`}
+                            style={{ transitionDelay: '0.2s' }}
+                        >
                             <img
                                 src={service.image}
                                 alt={service.title}
