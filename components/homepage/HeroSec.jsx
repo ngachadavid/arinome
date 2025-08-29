@@ -59,9 +59,7 @@ export default function HeroSec() {
                     style={{ transitionDelay: '1.2s' }}
                 >
                     <p className="text-lg md:text-xl">
-                        We are dedicated to providing innovative solutions and exceeding
-                        expectations. Our mission is to create lasting impact for our
-                        clients and communities we serve.
+                       Your trusted partner for office supplies, branding, ICT solutions, food & beverage, and finishing solutions. Delivering quality products and services that help businesses and institutions operate with confidence.
                     </p>
                 </div>
             </div>
