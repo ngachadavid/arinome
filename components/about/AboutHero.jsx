@@ -21,7 +21,7 @@ export default function AboutHero() {
       </div>
 
       {/* Overlapping Image */}
-      <div className="absolute bottom-[-200px] md:bottom-[-250px] right-0 w-[90%] md:w-[80%] z-10">
+      <div className="absolute bottom-[-240px] md:bottom-[-250px] right-0 w-[90%] md:w-[80%] z-10">
         <img
           src="/homepage/hero.webp"
           alt="About us"
