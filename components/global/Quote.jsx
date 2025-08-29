@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef, useEffect, useState } from "react";
 
-export default function Quote() {
+export default function Quote({ image, text, name, title }) {
   const ref = useRef(null);
   const [inView, setInView] = useState(false);
 
@@ -31,14 +31,13 @@ export default function Quote() {
       >
         {/* Left Image */}
         <div
-          className={`flex-shrink-0 transition-all duration-700 ease-out ${
-            inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-          }`}
+          className={`flex-shrink-0 transition-all duration-700 ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+            }`}
           style={{ transitionDelay: "0.1s" }}
         >
           <img
-            src="/homepage/hero.webp"
-            alt="Person"
+            src={image}
+            alt={name}
             className="w-24 md:w-20 h-24 md:h-20 rounded-full object-cover"
           />
         </div>
@@ -46,25 +45,21 @@ export default function Quote() {
         {/* Quote Content */}
         <div>
           <p
-            className={`mt-6 md:mt-0 text-lg md:text-2xl text-white w-full md:w-[70%] transition-all duration-700 ease-out ${
-              inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-            }`}
+            className={`mt-6 md:mt-0 text-lg md:text-2xl text-white w-full md:w-[70%] transition-all duration-700 ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+              }`}
             style={{ transitionDelay: "0.3s" }}
           >
-            “Working with Arinome has transformed how we manage our school operations. From our office essentials to
-            specialized supplies, their efficiency and professionalism have helped our school run smoothly. I can always
-            count on them to provide quality solutions on time.”
+            {`“${text}”`}
           </p>
           <div
-            className={`mt-4 transition-all duration-700 ease-out ${
-              inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-            }`}
+            className={`mt-4 transition-all duration-700 ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+              }`}
             style={{ transitionDelay: "0.5s" }}
           >
-            <h4 className="font-extrabold text-base md:text-lg text-white">Ted Murega</h4>
-            <p className="text-sm md:text-base text-white/60">
-              Operations Manager, Oldonyo Sabuk Primary School
-            </p>
+            <h4 className="font-extrabold text-base md:text-lg text-white">
+              {name}
+            </h4>
+            <p className="text-sm md:text-base text-white/60">{title}</p>
           </div>
         </div>
       </div>
