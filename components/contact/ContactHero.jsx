@@ -1,7 +1,17 @@
 'use client'
 import React, { useEffect, useState } from 'react'
-import Map from './Map'
+import dynamic from 'next/dynamic'
 import Form from './Form'
+
+// Dynamically import Map with no SSR
+const Map = dynamic(() => import('./Map'), {
+  ssr: false,
+  loading: () => (
+    <div className="md:w-[40%] h-[300px] md:h-[500px] flex items-center justify-center bg-gray-100 rounded-lg">
+      <p className="text-gray-600">Loading map...</p>
+    </div>
+  )
+})
 
 export default function ContactHero() {
   const [mounted, setMounted] = useState(false)
