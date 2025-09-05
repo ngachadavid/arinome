@@ -35,14 +35,18 @@ export default function Navigation() {
                     <div>
                         <Link href="/" className="flex items-center">
                             <div
-                                className={`font-bold transition-all duration-300 ${isScrolled ? "text-2xl md:text-2xl" : "text-2xl md:text-4xl"
+                                className={`font-bold transition-all duration-300 ${isScrolled || isMobileMenuOpen
+                                        ? "text-2xl md:text-2xl text-[#448AFF]"
+                                        : "text-2xl md:text-4xl text-white"
                                     }`}
                             >
                                 Arinome
                                 <sub
-                                    className={`font-normal transition-all duration-300 ${isScrolled
-                                        ? "opacity-0 scale-0 ml-0 text-xs md:text-sm"
-                                        : "opacity-100 scale-100 text-xs md:text-sm"
+                                    className={`ml-1 font-normal transition-all duration-300 ${isScrolled
+                                            ? "opacity-0 scale-0 ml-0 text-xs md:text-sm"
+                                            : isMobileMenuOpen
+                                                ? "opacity-100 scale-100 text-xs md:text-sm text-[#448AFF]"
+                                                : "opacity-100 scale-100 text-xs md:text-sm text-white"
                                         }`}
                                 >
                                     ventures
@@ -50,6 +54,7 @@ export default function Navigation() {
                             </div>
                         </Link>
                     </div>
+
 
                     {/* Desktop Right Section */}
                     <div className="hidden md:flex items-center space-x-8">
