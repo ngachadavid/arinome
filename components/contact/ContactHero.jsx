@@ -48,7 +48,7 @@ export default function ContactHero() {
 
         {/* Contact Section (Map + Form) */}
         <div
-          className={`absolute bottom-0 left-1/2 -translate-x-1/2 transform translate-y-1/2 w-[90%] md:w-[90%] z-10 bg-white rounded-2xl shadow-lg flex flex-col-reverse md:flex-row gap-6 transition-all duration-800 ease-out ${
+          className={`absolute bottom-0 left-1/2 -translate-x-1/2 transform translate-y-1/2 w-[90%] md:w-[80%] z-10 bg-white rounded-2xl shadow-lg flex flex-col-reverse md:flex-row gap-6 transition-all duration-800 ease-out ${
             mounted ? 'translate-y-1/2' : 'translate-y-1/2'
           }`}
         >
