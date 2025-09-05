@@ -210,7 +210,7 @@ export default function About() {
                                         transitionDelay: `${index * 0.10}s`
                                     }}
                                 >
-                                    <div className="bg-white rounded-xl shadow-lg p-4 md:p-6 h-full border border-gray-300 hover:shadow-xl transition-shadow text-start">
+                                    <div className="bg-white rounded-xl p-4 md:p-6 h-full border border-gray-300 text-start">
                                         <div className="text-4xl mb-12 md:mb-20">
                                             <IconComponent className="w-12 h-12 text-[#448AFF]" />
                                         </div>
