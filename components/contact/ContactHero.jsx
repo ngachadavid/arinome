@@ -51,9 +51,8 @@ export default function ContactHero() {
       {/* Contact Section (Map + Form) */}
       <div
         className={`absolute bottom-[-720px] md:bottom-[-250px] left-1/2 -translate-x-1/2 w-[90%] md:w-[80%] z-10 bg-white rounded-2xl shadow-lg flex flex-col-reverse md:flex-row gap-6 transition-all duration-800 ease-out ${
-          mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          mounted ? 'translate-y-0' : 'translate-y-4'
         }`}
-        style={{ transitionDelay: '0.5s' }}
       >
         <Map />
         <Form />

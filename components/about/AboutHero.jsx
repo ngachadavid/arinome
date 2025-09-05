@@ -40,9 +40,8 @@ export default function AboutHero() {
       {/* Overlapping Image */}
       <div
         className={`absolute bottom-[-240px] md:bottom-[-250px] right-0 w-[90%] md:w-[80%] z-10 transition-all duration-800 ease-out ${
-          mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          mounted ? 'translate-y-0' : 'translate-y-4'
         }`}
-        style={{ transitionDelay: '0.5s' }}
       >
         <img
           src="/homepage/hero.webp"
