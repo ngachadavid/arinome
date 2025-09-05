@@ -4,55 +4,56 @@ import React, { useEffect, useRef, useState } from 'react'
 const services = [
   {
     title: "Office Supplies",
-    description: "We equip your workplace with reliable, high-quality office essentials that keep your team productive and operations running smoothly.",
+    description: "From everyday stationery to office technology, we deliver essential supplies that keep your workplace running.",
     bullets: [
-      "Always in stock: avoid operational delays and interruptions",
-      "Expert guidance to select the most effective solutions for your team",
-      "Boosts productivity with dependable, high-quality supplies"
+      "Stationery & premium writing materials",
+      "Office furniture & ergonomic equipment",
+      "Printers, IT accessories & consumables"
     ],
     image: "/homepage/hero.webp",
   },
   {
     title: "Branding & Printing",
-    description: "We deliver creative branding and premium printing solutions that make your business stand out and leave a lasting impression.",
+    description: "Creative branding and premium printing solutions that give your business a professional, standout identity.",
     bullets: [
-      "Custom designs that capture your unique business identity",
-      "Premium print materials that leave a lasting impression",
-      "Meticulous attention to detail for professional, polished results"
+      "Business cards, brochures & corporate profiles",
+      "Custom signage, banners & promotional materials",
+      "Branded merchandise & packaging solutions"
     ],
     image: "/homepage/hero.webp",
   },
   {
     title: "Food & Beverage Supplies",
-    description: "We supply high-quality food and beverage essentials to ensure your operations stay smooth and your offerings remain top-notch.",
+    description: "Reliable supply of food and beverage essentials to keep your team refreshed and operations running smoothly.",
     bullets: [
-      "Consistent quality and freshness for all your needs",
-      "Streamlined supply to avoid stock shortages",
-      "Expert advice to optimize selection and ordering"
+      "Office pantry & breakroom essentials",
+      "Bottled water, soft drinks & beverages",
+      "Catering supplies & bulk food products"
     ],
     image: "/homepage/hero.webp",
   },
   {
     title: "ICT Solutions",
-    description: "We provide innovative ICT solutions that streamline your operations, improve efficiency, and drive digital transformation across your business.",
+    description: "Tailored ICT solutions that support your digital transformation and keep your business connected.",
     bullets: [
-      "Customized tech solutions to suit your operational needs",
-      "Reliable support to ensure smooth system performance",
-      "Optimizes workflows for efficiency and productivity"
+      "Computers, networking & IT hardware",
+      "Software licensing & digital tools",
+      "Technical support & system maintenance"
     ],
     image: "/homepage/hero.webp",
   },
   {
     title: "Paint & Finishing Supplies",
-    description: "We deliver high-quality paint and finishing supplies that ensure professional, lasting results for every project you undertake.",
+    description: "Durable paints and finishing products designed for professional results and long-lasting quality.",
     bullets: [
-      "Durable products that enhance appearance and longevity",
-      "Expert guidance to select the right materials for the job",
-      "Consistent quality to maintain standards across projects"
+      "Interior & exterior paints",
+      "Industrial coatings & finishes",
+      "Brushes, rollers & application tools"
     ],
     image: "/homepage/hero.webp",
   },
 ]
+
 
 
 export default function Services() {
@@ -147,12 +148,12 @@ export default function Services() {
                             </ul>
                         </div>
 
-                        {/* Image - more pronounced fade up animation */}
+                        {/* Image - fade up + slide from left on mobile */}
                         <div 
                             className={`md:w-1/2 transition-all duration-800 ease-out ${
                                 serviceVisibility[index] 
-                                    ? 'opacity-100 translate-y-0' 
-                                    : 'opacity-0 translate-y-6'
+                                    ? 'opacity-100 translate-y-0 translate-x-0' 
+                                    : 'opacity-0 translate-y-6 -translate-x-8 md:translate-x-0'
                             }`}
                             style={{ transitionDelay: '0.2s' }}
                         >
