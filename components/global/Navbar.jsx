@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { PhoneCall } from "lucide-react";
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -31,7 +32,6 @@ export default function Navbar() {
             >
                 <div className="max-w-[1280px] px-4 2xl:px-0 mx-auto flex items-center justify-between transition-all duration-300 py-4">
                     {/* Logo */}
-
                     <div>
                         <Link href="/" className="flex items-center">
                             <div
@@ -100,7 +100,10 @@ export default function Navbar() {
             </nav>
 
             {/* Mobile Full Screen Menu */}
-            <div className={`fixed top-0 left-0 right-0 z-40 bg-white transform transition-transform duration-300 md:hidden ${isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full'}`}>
+            <div
+                className={`fixed top-0 left-0 right-0 z-40 bg-white transform transition-transform duration-300 md:hidden ${isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"
+                    }`}
+            >
                 <div className="flex flex-col justify-start pt-24 px-6 h-screen">
                     {/* Mobile Menu Links */}
                     <ul className="space-y-0">
@@ -113,17 +116,26 @@ export default function Navbar() {
                                 About
                             </Link>
                         </li>
+                        <li className="border-b border-gray-300">
+                            <Link
+                                href="/contact"
+                                className="block text-2xl font-semibold text-black transition-colors duration-300 py-6"
+                                onClick={toggleMobileMenu}
+                            >
+                                Get in Touch
+                            </Link>
+                        </li>
                     </ul>
 
-                    {/* Mobile Get in Touch Button */}
-                    <div className="mt-12">
-                        <Link
-                            href="/contact"
-                            className="inline-block px-8 py-4 rounded-[25px] bg-[#448AFF] text-white font-bold text-lg transition-colors duration-300"
-                            onClick={toggleMobileMenu}
+                    {/* Call Us Button */}
+                   <div className="mt-10">
+                        <a
+                            href="tel:+254715259657"
+                            className="inline-flex items-center justify-center gap-4 px-6 py-3 text-xl rounded-[20px] bg-[#448AFF] text-white font-bold transition-colors duration-300"
                         >
-                            Get in Touch
-                        </Link>
+                            <PhoneCall className="w-6 h-6" />
+                            Call Us
+                        </a>
                     </div>
                 </div>
             </div>
