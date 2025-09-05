@@ -18,7 +18,7 @@ export default function Map() {
   const position = [-1.327295, 36.850602];
 
   return (
-    <div className="md:w-[40%] h-[300px] md:h-[500px]">
+    <div className="hidden md:flex md:w-[40%] md:h-[500px]">
       <MapContainer center={position} zoom={15} className="w-full h-full">
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
