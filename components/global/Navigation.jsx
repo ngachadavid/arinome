@@ -51,8 +51,6 @@ export default function Navigation() {
                         </Link>
                     </div>
 
-
-
                     {/* Desktop Right Section */}
                     <div className="hidden md:flex items-center space-x-8">
                         {/* About Link */}
