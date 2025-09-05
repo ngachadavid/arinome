@@ -35,7 +35,7 @@ export default function Intro() {
 
   return (
     <section className='bg-white' ref={ref}>
-        <div className='mt-70 md:mt-80 mb-20 max-w-[1280px] px-4 2xl:px-0 mx-auto'>
+        <div className='mt-20 md:mt-40 mb-20 max-w-[1280px] px-4 2xl:px-0 mx-auto'>
             {/* Animated title and divider */}
             <div className={`transition-all duration-700 ease-out ${
               isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
