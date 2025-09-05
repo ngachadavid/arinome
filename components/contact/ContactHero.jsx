@@ -37,14 +37,14 @@ export default function ContactHero() {
           </h1>
 
           {/* Paragraph */}
-          <p
+          <h2
             className={`mt-6 md:mt-32 2xl:mt-40 w-full md:w-[60%] 2xl:w-[30%] text-lg md:text-2xl leading-relaxed font-semibold text-start md:text-left transition-all duration-700 ease-out ${
               mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}
             style={{ transitionDelay: '0.3s' }}
           >
             We are here to help you. Contact us using the form below, and we will get back to you as soon as possible.
-          </p>
+          </h2>
         </div>
       </div>
 

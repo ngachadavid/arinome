@@ -44,22 +44,22 @@ export default function Quote({ image, text, name, title }) {
 
         {/* Quote Content */}
         <div>
-          <p
+          <h2
             className={`mt-6 md:mt-0 text-lg md:text-2xl text-white w-full md:w-[70%] transition-all duration-700 ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
             style={{ transitionDelay: "0.3s" }}
           >
             {`“${text}”`}
-          </p>
+          </h2>
           <div
             className={`mt-4 transition-all duration-700 ease-out ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
             style={{ transitionDelay: "0.5s" }}
           >
-            <h4 className="font-extrabold text-base md:text-lg text-white">
+            <h3 className="font-extrabold text-base md:text-xl text-white">
               {name}
-            </h4>
-            <p className="text-sm md:text-base text-white/60">{title}</p>
+            </h3>
+            <h4 className="text-sm md:text-base text-white/60">{title}</h4>
           </div>
         </div>
       </div>

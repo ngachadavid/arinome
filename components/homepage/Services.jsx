@@ -114,9 +114,9 @@ export default function Services() {
     return (
         <section className="py-20">
             <div className="max-w-[1280px] mx-auto px-4 2xl:px-0 space-y-16">
-                    <h1 className='text-black text-2xl md:text-4xl font-bold w-[50%]'>
+                    <h2 className='text-black text-2xl md:text-4xl font-bold w-full md:w-[60%]'>
                         Browse our services below to see how we can assist your business.
-                    </h1>
+                    </h2>
                     <div className="mt-6 w-full h-[1px] bg-gray-300 rounded"></div>
                 
 
@@ -138,9 +138,9 @@ export default function Services() {
                             }`}
                             style={{ transitionDelay: '0.2s' }}
                         >
-                            <h3 className="text-3xl font-bold mb-4">{service.title}</h3>
-                            <p className="text-black text-lg mb-4 w-[90%]">{service.description}</p>
-                            <ul className="px-2 list-disc list-inside text-black/90 space-y-1">
+                            <h3 className="text-lg md:text-2xl font-bold mb-4">{service.title}</h3>
+                            <h4 className="text-black text-base md:text-xl mb-4 w-[90%]">{service.description}</h4>
+                            <ul className="text-sm md:text-base px-2 list-disc list-inside text-black/90 space-y-1">
                                 {service.bullets.map((point, idx) => (
                                     <li key={idx}>{point}</li>
                                 ))}

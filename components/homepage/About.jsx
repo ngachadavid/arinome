@@ -120,7 +120,7 @@ export default function About() {
     return (
         <section className="py-20" ref={sectionRef}>
             <div className='max-w-[1280px] mx-auto px-4 2xl:px-0'>
-                <h1 className='text-black text-2xl md:text-4xl font-bold'>Why Arinome Ventures?</h1>
+                <h2 className='text-black text-2xl md:text-4xl font-bold w-full md:w-[60%]'>Why Arinome Ventures?</h2>
                 <div className="mt-6 w-full h-[1px] bg-gray-300 rounded"></div>
 
                 {/* Paragraph and Navigation */}
@@ -175,9 +175,9 @@ export default function About() {
                     </div>
 
                     <div className="w-[95%] md:w-2/3 lg:w-1/2">
-                        <p className="text-black text-base md:text-xl leading-relaxed">
+                        <h3 className="text-black text-base md:text-xl leading-relaxed">
                             You want seamless operations and dependable results; we're the partner that makes it happen. Our forward-thinking approach ensures every project runs smoothly and adds real value to your business.
-                        </p>
+                        </h3>
                     </div>
                 </div>
 
@@ -214,8 +214,8 @@ export default function About() {
                                         <div className="text-4xl mb-12 md:mb-20">
                                             <IconComponent className="w-12 h-12 text-[#448AFF]" />
                                         </div>
-                                        <h3 className="text-lg md:text-2xl font-bold text-black mb-3 w-[80%] md:w-[60%]">{feature.title}</h3>
-                                        <p className="text-black text-sm md:text-base leading-relaxed w-[90%]">{feature.description}</p>
+                                        <div className="text-lg md:text-2xl font-bold text-black mb-3 w-[80%] md:w-[60%]">{feature.title}</div>
+                                        <h3 className="text-black text-sm md:text-base leading-relaxed w-[90%]">{feature.description}</h3>
                                     </div>
                                 </div>
                             );

@@ -10,18 +10,18 @@ export default function Footer() {
                 <div className="grid md:grid-cols-2 gap-10 border-b border-white/30 pb-8">
                     {/* Left Side */}
                     <div>
-                        <p className="text-base md:text-lg leading-relaxed w-[80%] md:w-[60%]">
+                        <h2 className="text-base md:text-xl leading-relaxed w-[80%] md:w-[60%]">
                             We are committed to delivering innovative solutions
                             and exceptional results for all our clients.
-                        </p>
+                        </h2>
                     </div>
 
                     {/* Right Side */}
                     <div className="grid grid-cols-2 gap-8">
                         {/* Menu */}
                         <div>
-                            <h3 className="text-white/60 text-lg md:text-xl mb-4">Menu</h3>
-                            <ul className="space-y-2 md:space-y-4">
+                            <h3 className="text-white/60 text-lg md:text-2xl mb-4">Menu</h3>
+                            <ul className="text-sm md:text-base space-y-2 md:space-y-4">
                                 <li>
                                     <Link href="/about" className="">
                                         About
@@ -37,8 +37,8 @@ export default function Footer() {
 
                         {/* Contact */}
                         <div>
-                            <h3 className="text-white/60 text-lg md:text-xl mb-4">Contact</h3>
-                            <ul className="space-y-2 md:space-y-4">
+                            <h3 className="text-white/60 text-lg md:text-2xl mb-4">Contact</h3>
+                            <ul className="text-sm md:text-base space-y-2 md:space-y-4">
                                 <li>
                                     Panesar Centre
                                     Imara Daima, <br />Mombasa Road, Nairobi

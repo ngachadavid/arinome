@@ -58,9 +58,9 @@ export default function HeroSec() {
                     }`}
                     style={{ transitionDelay: '1.2s' }}
                 >
-                    <p className="text-lg md:text-xl">
+                    <h2 className="text-lg md:text-xl">
                        Your trusted partner for office supplies, branding, ICT solutions, food & beverage, and finishing solutions. Delivering quality products and services that help businesses and institutions operate with confidence.
-                    </p>
+                    </h2>
                 </div>
             </div>
 

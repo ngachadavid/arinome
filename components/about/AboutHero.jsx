@@ -25,14 +25,14 @@ export default function AboutHero() {
           </h1>
 
           {/* Paragraph */}
-          <p
+          <h2
             className={`mt-6 md:mt-32 2xl:mt-40 w-full md:w-[60%] 2xl:w-[30%] text-lg md:text-2xl leading-relaxed font-semibold text-start md:text-left transition-all duration-700 ease-out ${
               mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}
             style={{ transitionDelay: '0.3s' }}
           >
             Learn about the company's mission, guiding principles, and leadership spearheaded by a team of experts.
-          </p>
+          </h2>
 
         </div>
       </div>

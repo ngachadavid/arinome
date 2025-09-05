@@ -104,8 +104,8 @@ export default function Leadership() {
                   isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                 }`}
                 style={{ transitionDelay: `${0.3 + (index * 0.4)}s` }}>
-                  <h3 className="text-xl md:text-2xl font-bold text-black">{leader.name}</h3>
-                  <p className="text-base md:text-xl text-black/80 font-medium mt-2">{leader.title}</p>
+                  <h3 className="text-lg md:text-2xl font-bold text-black">{leader.name}</h3>
+                  <p className="text-sm md:text-base text-black/80 font-medium mt-2 leading-relaxed">{leader.title}</p>
                 </div>
               </div>
 
