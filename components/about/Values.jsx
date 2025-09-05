@@ -42,9 +42,9 @@ const ValueCard = ({ number, title, description, isVisible, delay = 0 }) => {
         <span className="mb-10 md:mb-40 text-white/60 text-xl font-bold block">{number.toString().padStart(2, '0')}</span>
         <h3 className="mb-4 text-xl md:text-2xl font-bold">{title}</h3>
       </div>
-      <p className="text-white leading-relaxed">
+      <h4 className="text-white leading-relaxed">
         {description}
-      </p>
+      </h4>
     </div>
   )
 }
@@ -78,7 +78,7 @@ export default function Values() {
                   isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                 }`}
                 style={{ transitionDelay: '0.1s' }}>
-                  <h1 className='text-black text-2xl md:text-4xl font-bold'>Our Values</h1>
+                  <h2 className='text-black text-2xl md:text-4xl font-bold'>Our Values</h2>
                   <div className="mt-6 w-full h-[1px] bg-gray-300 rounded"></div>
                 </div>
                 

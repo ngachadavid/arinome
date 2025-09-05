@@ -116,14 +116,14 @@ export default function Leadership() {
               style={{ transitionDelay: `${0.7 + (index * 0.4)}s` }}>
                 {/* Bio */}
                 {leader.bio.map((para, i) => (
-                  <p key={i} className="text-black text-sm md:text-base">
+                  <h4 key={i} className="text-black text-sm md:text-base">
                     {para}
-                  </p>
+                  </h4>
                 ))}
 
                 {/* Core Competencies */}
                 <div className="mt-4">
-                  <h4 className="font-bold text-black mb-2 text-sm md:text-base">Core Competencies</h4>
+                  <div className="font-bold text-black mb-2 text-sm md:text-base">Core Competencies</div>
                   <ul className="list-disc list-inside space-y-1 text-black/80 text-sm md:text-base">
                     {leader.competencies.map((comp, i) => (
                       <li key={i}>{comp}</li>
