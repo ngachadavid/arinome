@@ -52,6 +52,7 @@ export default function Navigation() {
                     </div>
 
 
+
                     {/* Desktop Right Section */}
                     <div className="hidden md:flex items-center space-x-8">
                         {/* About Link */}
@@ -97,11 +98,22 @@ export default function Navigation() {
                             onClick={toggleMobileMenu}
                             className="flex flex-col justify-center items-center w-8 h-8 space-y-1.5"
                         >
-                            <span className={`block w-6 h-0.5 bg-[#448AFF] transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-                            <span className={`block w-6 h-0.5 bg-[#448AFF] transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
-                            <span className={`block w-6 h-0.5 bg-[#448AFF] transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+                            <span
+                                className={`block w-6 h-0.5 transition-all duration-300 ${isScrolled || isMobileMenuOpen ? "bg-[#448AFF]" : "bg-white"
+                                    } ${isMobileMenuOpen ? "rotate-45 translate-y-2" : ""}`}
+                            ></span>
+                            <span
+                                className={`block w-6 h-0.5 transition-all duration-300 ${isScrolled || isMobileMenuOpen ? "bg-[#448AFF]" : "bg-white"
+                                    } ${isMobileMenuOpen ? "opacity-0" : ""}`}
+                            ></span>
+                            <span
+                                className={`block w-6 h-0.5 transition-all duration-300 ${isScrolled || isMobileMenuOpen ? "bg-[#448AFF]" : "bg-white"
+                                    } ${isMobileMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+                            ></span>
                         </button>
                     </div>
+
+
                 </div>
             </nav>
 
