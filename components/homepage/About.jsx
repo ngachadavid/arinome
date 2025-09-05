@@ -7,6 +7,9 @@ export default function About() {
     const [slidesPerView, setSlidesPerView] = useState(3.5)
     const [isVisible, setIsVisible] = useState(false)
     const sectionRef = useRef(null)
+    const sliderRef = useRef(null)
+    const [touchStart, setTouchStart] = useState(0)
+    const [touchEnd, setTouchEnd] = useState(0)
 
     const features = [
         {
@@ -87,6 +90,33 @@ export default function About() {
         }
     }
 
+    // Touch event handlers
+    const handleTouchStart = (e) => {
+        setTouchEnd(0) // Reset touchEnd
+        setTouchStart(e.targetTouches[0].clientX)
+    }
+
+    const handleTouchMove = (e) => {
+        setTouchEnd(e.targetTouches[0].clientX)
+    }
+
+    const handleTouchEnd = () => {
+        if (!touchStart || !touchEnd) return
+        
+        const distance = touchStart - touchEnd
+        const minSwipeDistance = 50 // Minimum distance for a swipe
+        
+        if (distance > minSwipeDistance) {
+            // Swiped left - go to next slide
+            nextSlide()
+        }
+        
+        if (distance < -minSwipeDistance) {
+            // Swiped right - go to previous slide
+            prevSlide()
+        }
+    }
+
     return (
         <section className="py-20" ref={sectionRef}>
             <div className='max-w-[1280px] mx-auto px-4 2xl:px-0'>
@@ -151,8 +181,14 @@ export default function About() {
                     </div>
                 </div>
 
-                {/* Single Swiper with animated cards */}
-                <div className="mt-16 overflow-hidden">
+                {/* Single Swiper with animated cards and touch support */}
+                <div 
+                    className="mt-16 overflow-hidden"
+                    ref={sliderRef}
+                    onTouchStart={handleTouchStart}
+                    onTouchMove={handleTouchMove}
+                    onTouchEnd={handleTouchEnd}
+                >
                     <div
                         className="flex transition-transform duration-300 ease-in-out"
                         style={{
