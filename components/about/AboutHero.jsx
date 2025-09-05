@@ -11,7 +11,7 @@ export default function AboutHero() {
   return (
     <section className="relative pb-[200px]">
       {/* Hero Background */}
-      <div className="bg-[#448AFF] h-[70vh] 2xl:h-screen relative">
+      <div className="bg-[#448AFF] h-[60vh] 2xl:h-screen relative">
         <div className="max-w-[1280px] px-4 2xl:px-0 mx-auto flex flex-col md:flex-row md:justify-between h-full text-white">
 
           {/* Heading */}
