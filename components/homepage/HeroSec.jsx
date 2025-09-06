@@ -13,7 +13,7 @@ export default function HeroSec() {
             {/* Background Image */}
             <div
                 className="absolute inset-0 bg-cover bg-center"
-                style={{ backgroundImage: "url('/homepage/hero.jpg')" }}
+                style={{ backgroundImage: "url('/homepage/hero.webp')" }}
             >
                 {/* Dark overlay */}
                 <div className="absolute inset-0 bg-black/50"></div>
