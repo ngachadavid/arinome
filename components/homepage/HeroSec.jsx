@@ -13,7 +13,7 @@ export default function HeroSec() {
             {/* Background Image */}
             <div
                 className="absolute inset-0 bg-cover bg-center"
-                style={{ backgroundImage: "url('/homepage/hero.webp')" }}
+                style={{ backgroundImage: "url('/homepage/hero.jpg')" }}
             >
                 {/* Dark overlay */}
                 <div className="absolute inset-0 bg-black/50"></div>
@@ -69,7 +69,7 @@ export default function HeroSec() {
                 className={`absolute bottom-[-150px] left-[-150px] z-0 transition-all duration-1000 ease-out ${
                     isLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-75'
                 }`}
-                style={{ transitionDelay: '1.6s' }}
+                style={{ transitionDelay: '2s' }}
             >
                 <div className="blob bg-[#448AFF] w-[300px] h-[300px] md:w-[500px] md:h-[500px]"></div>
             </div>

@@ -50,7 +50,7 @@ const services = [
             "Professional brushes, rollers & application tools",
             "Color matching & finishing consultation services"
         ],
-        image: "/services/paint1.jpg",
+        image: "/services/paint4.jpg",
     },
 ]
 
@@ -157,7 +157,7 @@ export default function Services() {
                             <img
                                 src={service.image}
                                 alt={service.title}
-                                className="w-full h-[300px] md:h-[400px] rounded-xl shadow-lg object-cover md:object-cove"
+                                className="w-full h-[300px] md:h-[400px] rounded-xl shadow-lg object-cover md:object-conta"
                             />
                         </div>
                     </div>

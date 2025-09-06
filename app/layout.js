@@ -1,12 +1,11 @@
-import { Playfair_Display } from "next/font/google";
+import { Merriweather } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/global/Navbar";
 import Footer from "@/components/global/Footer";
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const merriweather = Merriweather({
+  variable: "--font-merriweather",
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400", "700"], // you can also add "300" or "900"
 });
 
 export const metadata = {
@@ -17,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${playfair.variable} antialiased`}>
+      <body className={`${merriweather.variable} antialiased`}>
         {/* <Navbar /> */}
         {children}
         <Footer />

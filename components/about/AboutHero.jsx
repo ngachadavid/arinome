@@ -43,7 +43,7 @@ export default function AboutHero() {
             }`}
         >
           <img
-            src="/homepage/hero.webp"
+            src="/homepage/nairobi.jpg"
             alt="Company team and workspace showcasing our mission and values"
             className="rounded-l-2xl shadow-lg object-cover w-full h-[400px] md:h-[600px]"
             loading="eager"
