@@ -55,7 +55,7 @@ export default function Navbar() {
                     {/* Desktop Right Section */}
                     <div className="hidden md:flex items-center space-x-8">
                         {/* About Link */}
-                        <Link href="/about" className="hover:text-[#448AFF]/50 transition-colors duration-300">
+                        <Link href="/about" className="hover:text-white transition-colors duration-300">
                             About
                         </Link>
 

@@ -104,7 +104,7 @@ export default function About() {
         if (!touchStart || !touchEnd) return
         
         const distance = touchStart - touchEnd
-        const minSwipeDistance = 50 // Minimum distance for a swipe
+        const minSwipeDistance = 20
         
         if (distance > minSwipeDistance) {
             // Swiped left - go to next slide
