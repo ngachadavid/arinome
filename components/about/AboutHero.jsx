@@ -33,7 +33,7 @@ export default function AboutHero() {
               }`}
             style={{ transitionDelay: '0.3s' }}
           >
-            Learn about the company's mission, guiding principles, and leadership spearheaded by a team of experts.
+            Learn about the company's results, guiding values, and leadership spearheaded by a team of experts.
           </h2>
         </div>
 
