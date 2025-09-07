@@ -10,7 +10,7 @@ import Services from "@/components/homepage/Services";
 export const metadata = {
   title: "Arinome Ventures",
   description:
-    "Arinome Ventures supplies office products, branding and printing, ICT solutions, paint, food, and lifestyle essentials across Kenya. Reliable partner for businesses, schools, and institutions.",
+    "We supply office products, branding and printing, ICT solutions, paint, food, and lifestyle essentials in Nairobi and across Kenya.",
   keywords: [
     "office supplies Kenya",
     "branding Kenya",

@@ -9,9 +9,9 @@ import React from 'react'
 import Quote from '@/components/global/Quote'
 
 export const metadata = {
-  title: "About Us | Arinome Ventures",
+  title: "About Us",
   description:
-    "Discover Arinome Ventures’ story, guiding values, and leadership team, including Teresia Wangare Kithome and Wanjiru Kinyanjui. Learn how we deliver trusted office, branding, ICT, and lifestyle solutions across Kenya.",
+    "Learn about our values, and leadership by Teresia Kithome and Wanjiru Kinyanjui. Trusted office, branding, ICT, and lifestyle solutions in Kenya.",
   keywords: [
     "Arinome Ventures",
     "About Arinome Ventures",

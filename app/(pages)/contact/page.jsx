@@ -4,9 +4,9 @@ import Navigation from '@/components/global/Navigation'
 import React from 'react'
 
 export const metadata = {
-  title: "Contact Us | Arinome Ventures",
+  title: "Contact Us ",
   description:
-    "Get in touch with Arinome Ventures for inquiries, partnerships, and service requests. Use our contact form or reach us directly for office supplies, branding, ICT, and lifestyle solutions across Kenya.",
+    "Get in touch with Arinome Ventures for inquiries, partnerships, and service requests. Use our contact form or reach us directly for solutions across Kenya.",
   keywords: [
     "Arinome Ventures contact",
     "contact Arinome",
