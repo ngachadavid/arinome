@@ -59,7 +59,7 @@ export default function Navigation() {
                     {/* Desktop Right Section */}
                     <div className="hidden md:flex items-center space-x-8">
                         {/* About Link */}
-                        <Link href="/about" className="">
+                        <Link href="/about" className="text-white hover:text-white/50 transition-colors duration-300">
                             About
                         </Link>
 

@@ -23,12 +23,12 @@ export default function Footer() {
                             <h3 className="text-white/60 text-lg md:text-2xl mb-4">Menu</h3>
                             <ul className="text-sm md:text-base space-y-2 md:space-y-4">
                                 <li>
-                                    <Link href="/about" className="">
+                                    <Link href="/about" className="text-white hover:text-white/50 transition-colors duration-300">
                                         About
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/contact" className="">
+                                    <Link href="/contact" className="text-white hover:text-white/50 transition-colors duration-300">
                                         Contact
                                     </Link>
                                 </li>
@@ -41,12 +41,13 @@ export default function Footer() {
                             <ul className="text-sm md:text-base space-y-2 md:space-y-4">
                                 <li>
                                     Panesar Centre
-                                    Imara Daima, <br />Mombasa Road, Nairobi
+                                    <br />
+                                    Imara Daima, Mombasa Road, Nairobi
                                 </li>
                                 <li>
                                     <a
                                         href="mailto:info@arinome.com"
-                                        className=""
+                                        className="text-white hover:text-white/50 transition-colors duration-300"
                                     >
                                         info@arinome.com
                                     </a>
@@ -54,13 +55,14 @@ export default function Footer() {
                                 <li>
                                     <a
                                         href="tel:+254715259657"
-                                        className=""
+                                        className="text-white hover:text-white/50 transition-colors duration-300"
                                     >
                                         +254 715 259 657
                                     </a>
                                 </li>
                             </ul>
                         </div>
+
 
                     </div>
                 </div>
