@@ -6,34 +6,36 @@ import Hero from "@/components/homepage/Hero";
 import HeroSec from "@/components/homepage/HeroSec";
 import Services from "@/components/homepage/Services";
 
-// app/page.tsx or app/page.js
 
 export const metadata = {
   title: "Arinome Ventures",
   description:
-    "Arinome Ventures is a trusted supplier of office supplies, branding and printing services, ICT solutions, paint and finishing products, and lifestyle essentials across Kenya. Delivering quality and reliability for businesses, schools, and institutions.",
+    "Arinome Ventures supplies office products, branding and printing, ICT solutions, paint, food, and lifestyle essentials across Kenya. Reliable partner for businesses, schools, and institutions.",
   keywords: [
-    "Arinome Ventures",
     "office supplies Kenya",
-    "branding and printing Kenya",
+    "branding Kenya",
+    "printing services Kenya",
     "ICT solutions Kenya",
-    "paint and finishing supplies Kenya",
-    "food and beverages supplies Kenya",
+    "paint supplies Kenya",
     "corporate solutions Kenya",
   ],
   authors: [{ name: "Arinome Ventures" }],
   creator: "Arinome Ventures",
   publisher: "Arinome Ventures",
   metadataBase: new URL("https://arinomeventures.co.ke"),
+  alternates: {
+    canonical: "https://arinomeventures.co.ke",
+  },
   openGraph: {
-    title: "Arinome Ventures | Office, Branding, ICT & Lifestyle Solutions in Kenya",
+    title:
+      "Arinome Ventures | Office, Branding, ICT & Lifestyle Solutions in Kenya",
     description:
-      "Your trusted partner for office, branding, ICT, and lifestyle solutions in Kenya. From supplies to specialized services, Arinome Ventures delivers quality and reliability.",
+      "Trusted partner for office supplies, branding, ICT, and lifestyle solutions in Kenya. Quality products and reliable services for institutions and businesses.",
     url: "https://arinomeventures.co.ke",
     siteName: "Arinome Ventures",
     images: [
       {
-        url: "/homepage/hero.webp",
+        url: "https://arinomeventures.co.ke/homepage/hero.webp",
         width: 1200,
         height: 630,
         alt: "Arinome Ventures - Office, Branding, ICT & Lifestyle Solutions",
@@ -44,12 +46,14 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arinome Ventures | Office, Branding, ICT & Lifestyle Solutions in Kenya",
+    title:
+      "Arinome Ventures | Office, Branding, ICT & Lifestyle Solutions in Kenya",
     description:
-      "Arinome Ventures supplies office, branding, ICT, paint, food, and lifestyle products across Kenya. Trusted by businesses, schools, and organizations.",
-    images: ["/homepage/hero.webp"],
+      "Arinome Ventures delivers office, branding, ICT, paint, food, and lifestyle products across Kenya. Trusted by businesses and schools.",
+    images: ["https://arinomeventures.co.ke/homepage/hero.webp"],
   },
 };
+
 
 
 export default function Home() {
