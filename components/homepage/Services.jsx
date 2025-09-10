@@ -190,7 +190,7 @@ export default function Services() {
                         >
                             <h3 className="text-lg md:text-2xl font-bold mb-4">{service.title}</h3>
                             <h4 className="text-black/90 text-base md:text-xl mb-4 w-[90%]">{service.description}</h4>
-                            <ul className="text-sm md:text-base px-2 list-disc list-inside text-black/80 space-y-1">
+                            <ul className="text-sm md:text-base px-2 list-disc list-inside text-black/90 space-y-1">
                                 {service.bullets.map((point, idx) => (
                                     <li key={idx}>{point}</li>
                                 ))}

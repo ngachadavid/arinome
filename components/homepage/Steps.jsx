@@ -61,7 +61,7 @@ export default function Steps() {
                         <h3 className="text-base md:text-xl font-bold text-black mb-3">
                           {step.title}
                         </h3>
-                        <p className="text-sm md:text-base text-black leading-relaxed">
+                        <p className="text-sm md:text-base text-black/90 leading-relaxed">
                           {step.description}
                         </p>
                       </div>

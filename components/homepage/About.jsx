@@ -185,7 +185,7 @@ export default function About() {
                     </div>
 
                     <div className="w-[95%] md:w-2/3 lg:w-1/2">
-                        <h3 className="text-black text-base md:text-xl leading-relaxed">
+                        <h3 className="text-black/90 text-base md:text-xl leading-relaxed">
                             We provide a dependable single source for essential supplies and spares, sourced both locally and internationally. By focusing on speed, quality, and cost-effectiveness, we deliver solutions faster than traditional local agents, ensuring our clients always have access to what they need, when they need it
                         </h3>
                     </div>
@@ -224,7 +224,7 @@ export default function About() {
                                             <IconComponent className="w-12 h-12 text-[#448AFF]" />
                                         </div>
                                         <div className="text-lg md:text-2xl font-bold text-black mb-3 w-[80%] md:w-[60%]">{feature.title}</div>
-                                        <h3 className="text-black text-sm md:text-base leading-relaxed w-[90%]">{feature.description}</h3>
+                                        <h3 className="text-black/90 text-sm md:text-base leading-relaxed w-[90%]">{feature.description}</h3>
                                     </div>
                                 </div>
                             );
