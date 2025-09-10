@@ -3,12 +3,45 @@ import React, { useEffect, useRef, useState } from 'react'
 
 const services = [
     {
-        title: "Office Supplies",
-        description: "From everyday stationery to office technology, we deliver essential supplies that keep your workplace running.",
+        title: "General Office Stationery",
+        description: "Reliable supply of everyday office stationery and essentials, combining quality with affordability to keep your workplace running. We offer a wide range of products, including the examples below among many others:",
         bullets: [
-            "Stationery & premium writing materials",
-            "Office furniture & ergonomic equipment",
-            "Printers, IT accessories & consumables"
+            "Writing tools: pens, pencils, markers & highlighters",
+            "Paper products: notebooks, sticky notes, files & envelopes",
+            "Desk accessories: staplers, clips, scissors, calculators & organizers"
+        ],
+        image: "/services/office1.jpg",
+    },
+    {
+        title: "Custom Printed Stationery & Uniforms",
+        description: "High-quality printing and branding solutions designed to elevate your business identity. From promotional merchandise to professional uniforms, we help your brand stand out with durable, client-focused designs.",
+        bullets: [
+            "Printing services: offset, digital, large format, screen & laser engraving",
+            "Branded merchandise: notebooks, mugs, bottles, umbrellas & trophies",
+            "Corporate & promotional wear: T-shirts, polos, caps, bags & giveaways",
+            "Durable uniforms: tailored for schools, hospitality, security & more"
+        ],
+        image: "/services/office1.jpg",
+    },
+    {
+        title: "Computers, Printers & Accessories",
+        description: "Reliable supply of high-quality computers, printers, and accessories from trusted brands. Our wide selection ensures your business stays connected and operational with top-notch IT hardware and consumables.",
+        bullets: [
+            "Keyboards, mice, headsets, webcams & laptop accessories",
+            "Storage & connectivity: flash drives, external drives, cables & adapters",
+            "Power solutions: UPS units, batteries & surge protectors",
+            "Printers, cartridges & other IT consumables from leading brands"
+        ],
+        image: "/services/office1.jpg",
+    },
+    {
+        title: "Office Furniture & Boardroom Equipment",
+        description: "Quality office and boardroom furniture designed to create professional, comfortable, and productive environments. We offer both modular and traditional setups to meet your unique workspace needs.",
+        bullets: [
+            "Ergonomic chairs, boardroom & meeting tables",
+            "Sideboard cabinets & functional storage solutions",
+            "Projection carts, AV equipment & presentation tools",
+            "Podiums, lecterns, artwork & décor for professional spaces"
         ],
         image: "/services/office1.jpg",
     },
@@ -33,40 +66,46 @@ const services = [
         image: "/services/plascon.jpg",
     },
     {
-        title: "Construction & Building Solutions",
-        description: "Comprehensive support for residential and commercial projects, providing both quality materials and skilled labor to bring your vision to life.",
+        title: "Construction Materials",
+        description: "Your trusted source for high-quality construction materials, delivered on time anywhere in Kenya. From structural essentials to project necessities, we ensure every construction project runs smoothly.",
         bullets: [
-            "Construction materials including cement, tiles, roofing & fittings",
-            "Partnership with vetted contractors and skilled labor teams",
-            "End-to-end project support from supply to site completion"
+            "Cement, roofing materials & structural steel",
+            "Pipes, fittings & plumbing materials",
+            "Bricks, blocks & masonry products"
         ],
-        image: "/services/paint4.jpg",
+        image: "/services/office1.jpg",
     },
     {
-        title: "Food & Beverage Supplies",
-        description: "Reliable supply of food and beverage essentials to keep your team refreshed and focused.",
+        title: "Cleaning Materials, Detergents & Disinfectants",
+        description: "High-quality cleaning materials and disinfectants suitable for commercial, institutional, and residential use. Our products maintain hygienic and safe environments across industries.",
         bullets: [
-            "Office pantry essentials & breakroom supplies",
-            "Beverages, bottled water & packaged foods",
-            "Snacks and everyday refreshment options"
+            "Commercial cleaning supplies for offices, banks, NGOs, and schools",
+            "Disinfectants for safe, sanitized environments and post-relocation use",
+            "Residential cleaning essentials for homes and homesteads"
+        ],
+        image: "/services/office1.jpg",
+    },
+    {
+        title: "Dry and Fresh Foodstuffs",
+        description: "Wide range of dry and fresh foodstuffs sourced from trusted local and international suppliers. Ideal for schools, institutions, NGOs, government entities, and commercial clients across East Africa.",
+        bullets: [
+            "Chilled and processed foods for institutional and commercial use",
+            "Dry goods, condiments, and pantry essentials",
+            "Fresh produce to meet daily operational needs"
         ],
         image: "/services/food.webp",
     },
-
     {
-        title: "ICT Solutions",
-        description: "Tailored ICT solutions that support your digital transformation and keep your business connected.",
+        title: "Soft Drinks and Beverage Supply",
+        description: "We provide offices and organizations with a reliable supply of beverages and the essential ingredients to prepare them. From soft drinks to coffee and tea supplies, we ensure your team stays refreshed without any hassle.",
         bullets: [
-            "Computers, networking & IT hardware",
-            "Websites, applications & system development",
-            "Technical support & ongoing maintenance"
+            "Timely delivery of soft drinks and bottled beverages",
+            "Coffee, tea, sugar, fresh milk, and other beverage essentials",
+            "Additional items supplied on request to meet specific office needs"
         ],
-        image: "/services/sabuk.png",
+        image: "/services/food.webp",
     },
-
 ]
-
-
 
 export default function Services() {
     const [headerVisible, setHeaderVisible] = useState(false)
@@ -150,8 +189,8 @@ export default function Services() {
                             style={{ transitionDelay: '0.2s' }}
                         >
                             <h3 className="text-lg md:text-2xl font-bold mb-4">{service.title}</h3>
-                            <h4 className="text-black text-base md:text-xl mb-4 w-[90%]">{service.description}</h4>
-                            <ul className="text-sm md:text-base px-2 list-disc list-inside text-black/90 space-y-1">
+                            <h4 className="text-black/90 text-base md:text-xl mb-4 w-[90%]">{service.description}</h4>
+                            <ul className="text-sm md:text-base px-2 list-disc list-inside text-black/80 space-y-1">
                                 {service.bullets.map((point, idx) => (
                                     <li key={idx}>{point}</li>
                                 ))}
