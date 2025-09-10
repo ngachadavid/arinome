@@ -39,7 +39,7 @@ export default function Steps() {
           <div className="mt-6 w-full h-[1px] bg-gray-300 rounded"></div>
         </div>
       
-      <div className="max-w-5xl mx-auto px-4 mt-4 md:mt-10">
+      <div className="max-w-5xl mx-auto px-4 mt-4 md:mt-10 mb-20">
         <div className="relative">
           {/* Center vertical line */}
           <div className="absolute left-1/2 top-0 h-full w-0.5 bg-[#448AFF] -translate-x-1/2"></div>
