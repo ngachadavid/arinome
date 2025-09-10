@@ -23,15 +23,36 @@ const services = [
         image: "/services/print.jpg",
     },
     {
+        title: "Paint & Finishing Supplies",
+        description: "Durable paints and finishing products designed for professional results and long-lasting quality.",
+        bullets: [
+            "Interior, exterior & industrial premium paints",
+            "Professional brushes, rollers & application tools",
+            "Color matching & finishing consultation services"
+        ],
+        image: "/services/plascon.jpg",
+    },
+    {
+        title: "Construction & Building Solutions",
+        description: "Comprehensive support for residential and commercial projects, providing both quality materials and skilled labor to bring your vision to life.",
+        bullets: [
+            "Construction materials including cement, tiles, roofing & fittings",
+            "Partnership with vetted contractors and skilled labor teams",
+            "End-to-end project support from supply to site completion"
+        ],
+        image: "/services/paint4.jpg",
+    },
+    {
         title: "Food & Beverage Supplies",
-        description: "Reliable supply of food and beverage essentials to keep your team refreshed and operations running smoothly.",
+        description: "Reliable supply of food and beverage essentials to keep your team refreshed and focused.",
         bullets: [
             "Office pantry essentials & breakroom supplies",
             "Beverages, bottled water & packaged foods",
-            "Catering equipment & bulk order solutions"
+            "Snacks and everyday refreshment options"
         ],
         image: "/services/food.webp",
     },
+
     {
         title: "ICT Solutions",
         description: "Tailored ICT solutions that support your digital transformation and keep your business connected.",
@@ -42,16 +63,7 @@ const services = [
         ],
         image: "/services/sabuk.png",
     },
-    {
-        title: "Paint & Finishing Supplies",
-        description: "Durable paints and finishing products designed for professional results and long-lasting quality.",
-        bullets: [
-            "Interior, exterior & industrial premium paints",
-            "Professional brushes, rollers & application tools",
-            "Color matching & finishing consultation services"
-        ],
-        image: "/services/paint4.jpg",
-    },
+
 ]
 
 

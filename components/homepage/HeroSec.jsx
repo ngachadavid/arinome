@@ -59,7 +59,7 @@ export default function HeroSec() {
                     style={{ transitionDelay: '1.2s' }}
                 >
                     <h2 className="text-lg md:text-xl">
-                       Your trusted partner for office supplies, branding, ICT solutions, food & beverage, and finishing solutions. Delivering quality products and services that help businesses and institutions operate with confidence.
+                       A trusted general supply company dedicated to providing quality materials and solutions across fields, from office essentials to paint & finishing supplies.
                     </h2>
                 </div>
             </div>

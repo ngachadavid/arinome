@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect, useRef } from 'react'
-import { Target, HandHeart, Lightbulb, Heart, CheckCircle } from "lucide-react";
+import { DollarSign, PackageSearch, Boxes, HandHeart, Lightbulb, CheckCircle, Handshake } from "lucide-react";
 
 export default function About() {
     const [currentIndex, setCurrentIndex] = useState(0)
@@ -13,9 +13,19 @@ export default function About() {
 
     const features = [
         {
-            title: "Trusted Expertise",
-            description: "A proven track record in handling diverse projects with precision and professionalism, giving clients the confidence that every task is in safe hands.",
-            icon: Target
+            title: "Competitive Pricing",
+            description: "We deliver top-quality supplies at fair, competitive rates, ensuring you get maximum value without compromising on standards.",
+            icon: DollarSign
+        },
+        {
+            title: "Efficient Sourcing",
+            description: "With strong networks across local and international markets, we source the right products quickly and reliably to meet urgent demands.",
+            icon: PackageSearch
+        },
+        {
+            title: "Widest Product Range",
+            description: "From office essentials to specialized materials, our broad portfolio ensures you find everything you need under one trusted supplier.",
+            icon: Boxes
         },
         {
             title: "Dedicated Support",
@@ -28,15 +38,15 @@ export default function About() {
             icon: Lightbulb
         },
         {
-            title: "Client-First Commitment",
-            description: "Your priorities guide our process. We align with your objectives to ensure that every engagement adds value and exceeds expectations.",
-            icon: Heart
-        },
-        {
             title: "Dependable Delivery",
             description: "Timely, consistent, and reliable results are at the core of our operations — because in business, trust is built on keeping promises.",
             icon: CheckCircle
-        }
+        },
+        {
+            title: "Client-First Commitment",
+            description: "Your priorities guide our process. We align with your objectives to ensure that every engagement adds value and exceeds expectations.",
+            icon: Handshake
+        },
     ];
 
     // Intersection Observer for viewport detection
@@ -102,15 +112,15 @@ export default function About() {
 
     const handleTouchEnd = () => {
         if (!touchStart || !touchEnd) return
-        
+
         const distance = touchStart - touchEnd
         const minSwipeDistance = 20
-        
+
         if (distance > minSwipeDistance) {
             // Swiped left - go to next slide
             nextSlide()
         }
-        
+
         if (distance < -minSwipeDistance) {
             // Swiped right - go to previous slide
             prevSlide()
@@ -176,13 +186,13 @@ export default function About() {
 
                     <div className="w-[95%] md:w-2/3 lg:w-1/2">
                         <h3 className="text-black text-base md:text-xl leading-relaxed">
-                            You want seamless operations and dependable results; we're the partner that makes it happen. Our forward-thinking approach ensures every project runs smoothly and adds real value to your business.
+                            We provide a dependable single source for essential supplies and spares, sourced both locally and internationally. By focusing on speed, quality, and cost-effectiveness, we deliver solutions faster than traditional local agents, ensuring our clients always have access to what they need, when they need it
                         </h3>
                     </div>
                 </div>
 
                 {/* Single Swiper with animated cards and touch support */}
-                <div 
+                <div
                     className="mt-16 overflow-hidden"
                     ref={sliderRef}
                     onTouchStart={handleTouchStart}
@@ -200,12 +210,11 @@ export default function About() {
                             return (
                                 <div
                                     key={index}
-                                    className={`flex-shrink-0 px-1 md:px-2 transition-all duration-700 ease-out ${
-                                        isVisible 
-                                            ? 'opacity-100 translate-y-0' 
+                                    className={`flex-shrink-0 px-1 md:px-2 transition-all duration-700 ease-out ${isVisible
+                                            ? 'opacity-100 translate-y-0'
                                             : 'opacity-0 translate-y-4'
-                                    }`}
-                                    style={{ 
+                                        }`}
+                                    style={{
                                         width: `calc(100% / ${slidesPerView})`,
                                         transitionDelay: `${index * 0.10}s`
                                     }}
