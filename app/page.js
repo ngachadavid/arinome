@@ -5,6 +5,7 @@ import About from "@/components/homepage/About";
 import Hero from "@/components/homepage/Hero";
 import HeroSec from "@/components/homepage/HeroSec";
 import Services from "@/components/homepage/Services";
+import Steps from "@/components/homepage/Steps";
 
 
 export const metadata = {
@@ -60,6 +61,7 @@ export default function Home() {
       <Navbar />
       <HeroSec />
       <About />
+      <Steps />
       <Services />
       <Quote
         image="/homepage/teddy.webp"
