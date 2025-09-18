@@ -21,6 +21,9 @@ export const metadata = {
   creator: "Arinome Ventures",
   publisher: "Arinome Ventures",
   metadataBase: new URL("https://arinomeventures.co.ke"),
+  alternates: {
+    canonical: "/contact",
+  },
   openGraph: {
     title: "Contact Us | Arinome Ventures",
     description:
