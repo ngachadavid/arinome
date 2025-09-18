@@ -7,7 +7,7 @@ import Form from './Form'
 const Map = dynamic(() => import('./Map'), {
   ssr: false,
   loading: () => (
-    <div className="md:w-[40%] h-[300px] md:h-[500px] flex items-center justify-center bg-gray-100 rounded-lg">
+    <div className="md:w-[50%] h-[300px] md:h-[500px] flex items-center justify-center bg-gray-100 rounded-lg">
       <p className="text-gray-600">Loading map...</p>
     </div>
   )
@@ -48,7 +48,7 @@ export default function ContactHero() {
 
         {/* Contact Section (Map + Form) */}
         <div
-          className={`absolute bottom-0 left-1/2 -translate-x-1/2 transform translate-y-1/2 w-[90%] md:w-[80%] z-10 bg-white rounded-2xl shadow-lg flex flex-col-reverse md:flex-row gap-6 transition-all duration-800 ease-out ${
+          className={`absolute bottom-0 left-1/2 -translate-x-1/2 transform translate-y-1/2 w-[90%] md:w-[80%] h-[600px] z-10 bg-white rounded-2xl shadow-lg flex flex-col-reverse md:flex-row gap-6 transition-all duration-800 ease-out ${
             mounted ? 'translate-y-1/2' : 'translate-y-1/2'
           }`}
         >
