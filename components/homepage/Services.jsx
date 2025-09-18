@@ -26,7 +26,6 @@ export default function Services() {
             },
             { threshold: 0.3 }
         );
-
         if (headerRef.current) {
             observer.observe(headerRef.current);
         }
@@ -106,11 +105,10 @@ export default function Services() {
                         </div>
 
                         {/* Images */}
-                        {/* Images */}
                         <div
                             className={`w-full md:w-[55%] h-[300px] md:h-[400px] relative rounded-xl overflow-hidden`}
                         >
-                            {/* Main hero image - slides down */}
+                            {/* Main hero image - slides from left */}
                             <div
                                 className={`absolute left-0 top-8 w-[50%] h-[65%] transition-all duration-700 ease-out ${serviceVisibility[index]
                                         ? "opacity-100 translate-y-0"
@@ -138,7 +136,7 @@ export default function Services() {
                                 />
                             </div>
 
-                            {/* Tertiary image - slides from left */}
+                            {/* Tertiary image - slides from down */}
                             <div
                                 className={`absolute left-[40%] bottom-4 w-[32%] h-[38%] shadow-lg z-20 transition-all duration-700 ease-out delay-300 ${serviceVisibility[index]
                                         ? "opacity-100 translate-x-0"
@@ -153,7 +151,6 @@ export default function Services() {
                                 <div className="absolute -top-1 -left-1 w-full h-full bg-white rounded-xl -z-10"></div>
                             </div>
                         </div>
-
                     </div>
                 ))}
             </div>
