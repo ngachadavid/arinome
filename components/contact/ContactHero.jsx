@@ -48,7 +48,7 @@ export default function ContactHero() {
       </div>
       
       {/* White overlay section - positioned to show 50% on blue, 50% off */}
-      <div className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-2/5 bg-white h-screen max-w-7xl rounded-2xl shadow-2xl z-10 flex flex-col-reverse md:flex-row gap-6 p-2 md:p-6 transition-all duration-800 ease-out w-4/5 md:w-3/4${
+      <div className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 bg-white h-screen max-w-7xl rounded-2xl shadow-2xl z-10 flex flex-col-reverse md:flex-row gap-6 p-2 md:p-6 transition-all duration-800 ease-out w-4/5 md:w-3/4${
         mounted ? 'opacity-100' : 'opacity-0'
       }`}>
         <Map />
