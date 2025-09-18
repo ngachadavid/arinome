@@ -251,7 +251,6 @@ const structuredData = {
 export default function Home() {
   return (
     <>
-      {/* Structured Data for SEO */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
