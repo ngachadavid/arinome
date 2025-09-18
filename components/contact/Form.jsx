@@ -33,23 +33,36 @@ export default function Form() {
         setErrors({});
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const newErrors = {};
+    const handleSubmit = async (e) => {
+  e.preventDefault();
+  const newErrors = {};
 
-        if (!formData.fullName.trim()) newErrors.fullName = 'Full Name is required';
-        if (!formData.phoneNumber.trim()) newErrors.phoneNumber = 'Phone Number is required';
+  if (!formData.fullName.trim()) newErrors.fullName = "Full Name is required";
+  if (!formData.phoneNumber.trim()) newErrors.phoneNumber = "Phone Number is required";
 
-        setErrors(newErrors);
+  setErrors(newErrors);
 
-        if (Object.keys(newErrors).length === 0) {
-            console.log('Form submitted:', formData);
-            resetForm();
-            setSuccess(true);
-        }
-    };
+  if (Object.keys(newErrors).length === 0) {
+    try {
+      const response = await fetch("https://formspree.io/f/xovngqro", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-    // ✅ Auto-hide success message after 3 seconds
+      if (response.ok) {
+        resetForm();
+        setSuccess(true);
+      } else {
+        setErrors({ submit: "Something went wrong. Please try again." });
+      }
+    } catch (error) {
+      console.error(error);
+      setErrors({ submit: "Error submitting form. Please try later." });
+    }
+  }
+};
+
     useEffect(() => {
         if (success) {
             const timer = setTimeout(() => setSuccess(false), 3000);
@@ -58,7 +71,7 @@ export default function Form() {
     }, [success]);
 
     return (
-        <form onSubmit={handleSubmit} className="md:w-[60%] space-y-6 p-6 md:p-12">
+        <form onSubmit={handleSubmit} className="w-[80%] md:w-[60%] space-y-6 px-2 md:px-4 py-6 md:py-12">
             {success && (
                 <p className="text-green-500 text-sm transition-opacity duration-500">
                     Form submitted successfully!
