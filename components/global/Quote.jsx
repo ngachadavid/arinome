@@ -38,7 +38,7 @@ export default function Quote({ image, text, name, title }) {
           <img
             src={image}
             alt={name}
-            className="w-24 md:w-20 h-24 md:h-20 rounded-full object-cover"
+            className="w-24 md:w-40 h-24 md:h-40 rounded-full object-cover"
           />
         </div>
 

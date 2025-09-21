@@ -295,7 +295,7 @@ export default function page() {
       <Values />
       <Leadership />
       <Quote
-        image="/homepage/hero.webp"
+        image="/homepage/josh.jpg"
         text="Arinome delivered exceptional solutions by enhancing our online store system and providing high-quality printed materials. We continue to work with them, as they remain a reliable partner."
         name="Isaac Okoth"
         title="Founder, Creative Agency Inc."
