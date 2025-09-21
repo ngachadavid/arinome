@@ -44,17 +44,17 @@
     ]
   },
   {
-    "title": "Branding & Printing",
-    "description": "Creative branding and premium printing solutions that give your business a professional, standout identity.",
+    "title": "Custom Branding & Printing",
+    "description": "Creative branding and premium printing solutions to give your business a standout identity. From stationery to uniforms and branded corporate wear, we deliver durable and professional designs.",
     "bullets": [
       "Logo design & full brand identity development",
-      "Custom signage, banners & promotional materials",
-      "Business cards, brochures & corporate profiles"
+      "Stationery, signage & promotional merchandise",
+      "Branded uniforms, T-shirts, and corporate wear"
     ],
     "gallery": [
-      "/services/office1.webp",
-      "/services/office1.webp",
-      "/services/office1.webp"
+      "/services/printt.png",
+      "/services/brand.webp",
+      "/services/pen.webp"
     ]
   },
   {
@@ -66,24 +66,9 @@
       "Color matching & finishing consultation services"
     ],
     "gallery": [
-      "/services/office1.webp",
-      "/services/office1.webp",
-      "/services/office1.webp"
-    ]
-  },
-  {
-    "title": "Custom Printed Stationery & Uniforms",
-    "description": "High-quality printing and branding solutions designed to elevate your business identity. From promotional merchandise to professional uniforms, we help your brand stand out with durable, client-focused designs.",
-    "bullets": [
-      "Printing services: offset, digital, large format, screen & laser engraving",
-      "Branded merchandise: notebooks, mugs, bottles, umbrellas & trophies",
-      "Corporate & promotional wear: T-shirts, polos, caps, bags & giveaways",
-      "Durable uniforms: tailored for schools, hospitality, security & more"
-    ],
-    "gallery": [
-      "/services/office1.webp",
-      "/services/office1.webp",
-      "/services/office1.webp"
+      "/services/paint.jpeg",
+      "/services/paint1.jpg",
+      "/services/paint4.jpeg"
     ]
   },
   {
