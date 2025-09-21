@@ -52,7 +52,7 @@
       "Branded uniforms, T-shirts, and corporate wear"
     ],
     "gallery": [
-      "/services/printt.png",
+      "/services/printt.webp",
       "/services/brand.webp",
       "/services/pen.webp"
     ]
@@ -66,9 +66,9 @@
       "Color matching & finishing consultation services"
     ],
     "gallery": [
-      "/services/paint.jpeg",
-      "/services/paint1.jpg",
-      "/services/paint4.jpeg"
+      "/services/paint.webp",
+      "/services/paint1.webp",
+      "/services/paint4.webp"
     ]
   },
   {
@@ -81,7 +81,7 @@
     ],
     "gallery": [
       "/services/roof.webp",
-      "/services/steel.jpg",
+      "/services/steel.webp",
       "/services/cement.webp"
     ]
   },
@@ -96,7 +96,7 @@
     "gallery": [
       "/services/clean.webp",
       "/services/cleaan.webp",
-      "/services/germ.png"
+      "/services/germ.webp"
     ]
   },
   {
@@ -108,8 +108,8 @@
       "Additional items supplied on request to meet specific office needs"
     ],
     "gallery": [
-      "/services/soda.jpg",
-      "/services/waba.jpg",
+      "/services/soda.webp",
+      "/services/waba.webp",
       "/services/coffee.webp"
     ]
   },
@@ -122,7 +122,7 @@
       "Fresh produce to meet daily operational needs"
     ],
     "gallery": [
-      "/services/sasini.png",
+      "/services/sasini.webp",
       "/services/fruits.webp",
       "/services/cereal.webp"
     ]
