@@ -38,9 +38,9 @@
       "Podiums, lecterns, artwork & décor for professional spaces"
     ],
     "gallery": [
-      "/services/desk.jpg",
-      "/services/cab.png",
-      "/services/chair.jpg"
+      "/services/desk.webp",
+      "/services/cab.webp",
+      "/services/chair.webp"
     ]
   },
   {
@@ -82,7 +82,7 @@
     "gallery": [
       "/services/roof.webp",
       "/services/steel.jpg",
-      "/services/cement.jpg"
+      "/services/cement.webp"
     ]
   },
   {
@@ -94,7 +94,7 @@
       "Residential cleaning essentials for homes and homesteads"
     ],
     "gallery": [
-      "/services/clean.jpg",
+      "/services/clean.webp",
       "/services/cleaan.webp",
       "/services/germ.png"
     ]
@@ -110,7 +110,7 @@
     "gallery": [
       "/services/soda.jpg",
       "/services/waba.jpg",
-      "/services/coffee.jpg"
+      "/services/coffee.webp"
     ]
   },
   {
@@ -123,8 +123,8 @@
     ],
     "gallery": [
       "/services/sasini.png",
-      "/services/fruits.jpg",
-      "/services/cereal.jpg"
+      "/services/fruits.webp",
+      "/services/cereal.webp"
     ]
   }
 ]

@@ -94,8 +94,8 @@ export default function Steps() {
                   className={`bg-white rounded-2xl px-6 md:px-8 py-4 md:py-8 shadow-lg
                   ${
                     index % 2 === 0
-                      ? `border-l-4 ${step.color.replace("bg-", "border-")}`
-                      : `border-r-4 ${step.color.replace("bg-", "border-")}`
+                      ? `border-l-4 ${step.color.replace("bg-[#448AFF]", "border-[#448AFF]")}`
+                      : `border-r-4 ${step.color.replace("bg-[#448AFF]", "border-[#448AFF]")}`
                   }
                   hover:shadow-xl transition-shadow duration-300`}
                 >
