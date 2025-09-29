@@ -30,6 +30,11 @@ export const metadata = {
   alternates: {
     canonical: "https://arinomeventures.co.ke",
   },
+  icons: {
+  icon: '/icon.png', 
+  apple: '/apple-touch-icon.png', 
+},
+  manifest: '/site.webmanifest',
   openGraph: {
     title: "Arinome Ventures",
     description:
