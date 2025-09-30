@@ -61,7 +61,7 @@ const contactStructuredData = {
       url: "https://arinomeventures.co.ke",
       logo: {
         "@type": "ImageObject",
-        url: "https://arinomeventures.co.ke/logo.png",
+        url: "https://arinomeventures.co.ke/icon.png",
         width: 200,
         height: 60
       },
